@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NoteApp;
 
+namespace NoteApp
+{
+    public class Project { }
+}
+
 namespace NoteAppUI
 {
     public partial class MainForm23 : Form

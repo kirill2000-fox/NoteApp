@@ -1,5 +1,5 @@
 ﻿
-namespace NoteAppUI
+namespace NoteApp
 {
     partial class MainForm23
     {
