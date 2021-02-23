@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 using NoteApp;
+
+
 
 
 namespace NoteAppUI
@@ -26,11 +30,12 @@ namespace NoteAppUI
         {
 
         }
-
+        /// <summary>
+        /// Метод Описание заметок
+        /// </summary>
         public void Description()
         {
-
-            {
+            
                 var note = new Note();
                 note.Name = new string[]
                     {"Название"};
@@ -38,8 +43,20 @@ namespace NoteAppUI
                 {
                     "Напомнить завтра Юле в 7 утра"
                 };
-                note.Time = 11;
-            }
+                note.CategoryNotes = new string[]
+                {
+                    "Работа",
+                    "Дом",
+                    "Здоровье и спорт",
+                    "Люди",
+                    "Документы",
+                    " Финансы",
+                    "Разное"
+                };
+                
+                note.TimeCreation = 11;
+                note.TimeChange = 12;
+
         }
 
 
