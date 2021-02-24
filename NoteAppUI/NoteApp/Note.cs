@@ -23,6 +23,14 @@ namespace NoteApp
         /// Категории заметки.
         /// </summary>
         private string _categoryNotes;
+        // <summary>
+        /// Время создания
+        /// </summary>
+        private DateTime _timeCreation;
+        // <summary>
+        /// Время изменения
+        /// </summary>
+        private DateTime _timeChange;
 
         /// <summary>
         /// Возвращает и задает имя заметки.
@@ -72,16 +80,33 @@ namespace NoteApp
 
             }
         }
-        
-
         /// <summary>
         /// Задает время создания заметки
         /// </summary>
-        public double TimeCreation { get; set; }
+        public DateTime TimeCreation 
+        {
+            get { return _timeCreation; }
+            private set
+            {
+                _timeCreation = value;
+            }
+        }
         /// <summary>
         /// Возвращает и задает время изменения
         /// </summary>
-        public double TimeChange { get; set; }
+        public DateTime TimeChange
+        {
+            get { return _timeChange; }
+            private set
+
+            {
+                _timeChange = value;
+            }
+        }
+
+
+       
+   
 
     }
 }

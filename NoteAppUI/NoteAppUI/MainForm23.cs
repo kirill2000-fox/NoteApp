@@ -36,26 +36,7 @@ namespace NoteAppUI
         public void Description()
         {
             
-                var note = new Note();
-                note.Name = new string[]
-                    {"Название"};
-                note.Text = new string[]
-                {
-                    "Напомнить завтра Юле в 7 утра"
-                };
-                note.CategoryNotes = new string[]
-                {
-                    "Работа",
-                    "Дом",
-                    "Здоровье и спорт",
-                    "Люди",
-                    "Документы",
-                    " Финансы",
-                    "Разное"
-                };
-                
-                note.TimeCreation = 11;
-                note.TimeChange = 12;
+               
 
         }
 
