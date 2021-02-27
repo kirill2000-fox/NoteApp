@@ -11,6 +11,23 @@ namespace NoteApp
     /// </summary>
     public class Note
     {
+        public DateTime Time_Creation;
+        public DateTime Time_Change;
+
+        /// <summary>
+        /// Конструктор времени создания и изменения
+        /// </summary>
+        public Note(DateTime TimeCreation, DateTime TimeChange) { Time_Creation = TimeCreation; Time_Change = TimeChange; }
+        public void GetInfo()
+        {
+            Console.WriteLine($"Время создания: {Time_Creation}  Время последнего изменения: {Time_Change}");
+        }
+
+        public Note()
+        {
+            TimeCreation = DateTime.Now;
+            TimeChange = DateTime.Now;
+        }
         /// <summary>
         /// Имя заметки.
         /// </summary>
@@ -104,9 +121,10 @@ namespace NoteApp
             }
         }
 
-
        
-   
+        
+
+
 
     }
 }

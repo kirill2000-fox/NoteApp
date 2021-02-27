@@ -28,17 +28,15 @@ namespace NoteAppUI
 
         private void MainForm23_Load(object sender, EventArgs e)
         {
+           
+            Note time = new Note(DateTime.Now, DateTime.Now);
+
 
         }
-        /// <summary>
-        /// Метод Описание заметок
-        /// </summary>
-        public void Description()
-        {
-            
-               
 
-        }
+       
+       
+
 
         private void button3_Click(object sender, EventArgs e)
         {
