@@ -11,43 +11,31 @@ namespace NoteApp
     /// </summary>
     public class Note
     {
-        public DateTime Time_Creation;
-        public DateTime Time_Change;
-
-        /// <summary>
-        /// Конструктор времени создания и изменения
-        /// </summary>
-        public Note(DateTime TimeCreation, DateTime TimeChange) { Time_Creation = TimeCreation; Time_Change = TimeChange; }
-        public void GetInfo()
-        {
-            Console.WriteLine($"Время создания: {Time_Creation}  Время последнего изменения: {Time_Change}");
-        }
-
-        public Note()
-        {
-            TimeCreation = DateTime.Now;
-            TimeChange = DateTime.Now;
-        }
+        
         /// <summary>
         /// Имя заметки.
         /// </summary>
-        private string _name;
+        private string _name { get; set; }
         /// <summary>
         /// Текст заметки.
         /// </summary>
-        private string _text;
+        private string _text { get; set; }
         /// <summary>
         /// Категории заметки.
         /// </summary>
-        private string _categoryNotes;
+        private string _categoryNotes { get; set; }
         // <summary>
         /// Время создания
         /// </summary>
-        private DateTime _timeCreation;
+        private DateTime _timeCreation { get; set; }
         // <summary>
         /// Время изменения
         /// </summary>
-        private DateTime _timeChange;
+        private DateTime _timeChange { get; set; }
+
+       
+       
+
 
         /// <summary>
         /// Возвращает и задает имя заметки.
@@ -121,9 +109,23 @@ namespace NoteApp
             }
         }
 
-       
-        
+        /// <summary>
+        /// Конструктор времени создания и изменения
+        /// </summary>
 
+        public Note(string name, string text, string categoryNotes, DateTime timeCreation, DateTime timeChange)
+        {
+             Name = name;
+             Text = text;
+             CategoryNotes = categoryNotes;
+             TimeCreation = timeCreation;
+             TimeChange = timeChange;
+        }
+        public void GetInfo()
+        {
+            Console.WriteLine(
+                $"Название:{_name} Текст:{_text} Категория заметки:{_categoryNotes} Время создания: {_timeCreation}  Время последнего изменения: {_timeChange}");
+        }
 
 
     }

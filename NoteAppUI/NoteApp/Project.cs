@@ -8,5 +8,6 @@ namespace NoteApp
 {
     public class Project
     {
+        private Note[] notes;
     }
 }

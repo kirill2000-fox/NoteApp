@@ -29,7 +29,7 @@ namespace NoteAppUI
         private void MainForm23_Load(object sender, EventArgs e)
         {
            
-            Note time = new Note(DateTime.Now, DateTime.Now);
+            
 
 
         }
