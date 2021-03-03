@@ -11,27 +11,31 @@ namespace NoteApp
     /// </summary>
     public class Note
     {
-        
+
         /// <summary>
         /// Имя заметки.
         /// </summary>
-        private string _name { get; set; }
+        private string _name = "Без Названия";
+
         /// <summary>
         /// Текст заметки.
         /// </summary>
-        private string _text { get; set; }
+        private string _text;
+
         /// <summary>
         /// Категории заметки.
         /// </summary>
-        private string _categoryNotes { get; set; }
-        // <summary>
+        private string _categoryNotes;
+
+        /// <summary>
         /// Время создания
         /// </summary>
-        private DateTime _timeCreation { get; set; }
-        // <summary>
+        private DateTime _timeCreation;
+
+        /// <summary>
         /// Время изменения
         /// </summary>
-        private DateTime _timeChange { get; set; }
+        private DateTime _timeChange;
 
        
        
@@ -110,7 +114,7 @@ namespace NoteApp
         }
 
         /// <summary>
-        /// Конструктор времени создания и изменения
+        /// Конструктор 
         /// </summary>
 
         public Note(string name, string text, string categoryNotes, DateTime timeCreation, DateTime timeChange)
