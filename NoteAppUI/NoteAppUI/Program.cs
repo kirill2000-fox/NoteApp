@@ -22,16 +22,24 @@ namespace NoteAppUI
             DateTime time = DateTime.Now;
             DateTime time1 = DateTime.Now;
 
-            Note note2 = new Note("Прогаа", " tttttttttt", "Sport", time,time1 );
+            Note note2 = new Note("Заметка", " tttttttttt", "Sport", time,time1 );
 
             note2.GetInfo();
 
+            /// <summary>
+            /// Проверка имени на вывод более 50 символов.
+            /// </summary>
             note2.Name = "tghadsgfddffdgsdgsfsgfsdggsgsfdgfsdsgfgsfsgfdsgfdsgfdsgfgfsdgsfsgfsgfdsgfdsgfsdfgfdgsfdgsfsgfsgfsgfgsfsggsdggsfd";
             Console.WriteLine(note2.Name);
-            note2.Name = "tghadsgfddffdgsdgsfsgfsdggsgsfdgfsdsgfфыавфыавфаgsfsgfdsgfdsgfdsgfgfsdgsfsgfsgfdsgfdsgfsdfgfdgsfdgsfsgfsgfsgfgsfsggsdggsfd";
-            Console.WriteLine(note2.Name);
-            note2.Name = "tghadsgfddffdgsdgsfsgfsdggsgsfdgfsdsgfфыавфыавфаgsfsgfdsgfdsgfdsgfgfsdgsfsgfsgfdsgfdsgfsdfgfdgsfdgsfsgfsgfsgfgsfsggsdggsfd";
-            Console.WriteLine(note2.Name);
+
+            /// <summary>
+            /// Проверка текста на вывод более 1500 символов.
+            /// </summary>
+            note2.Text = "tghadsgfddffdgsdgsfsgfsdggsgsfdgfsdsgfфыавфыавфаgsfsgfdsgfdsgfdsgfgfsdgsfsgfsgfdsgfdsgfsdfgfdgsfdgsfsgfsgfsgfgsfsggsdggsfd";
+            Console.WriteLine(note2.Text);
+
+            note2.CategoryNotes = "tghadsgfddffdgsdgsfsgfsdggsgsfdgfsdsgfфыавфыавфаgsfsgfdsgfdsgfdsgfgfsdgsfsgfsgfdsgfdsgfsdfgfdgsfdgsfsgfsgfsgfgsfsggsdggsfd";
+            Console.WriteLine(note2.CategoryNotes);
 
         }
     }
