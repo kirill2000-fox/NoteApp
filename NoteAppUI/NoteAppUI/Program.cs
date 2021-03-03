@@ -23,7 +23,7 @@ namespace NoteAppUI
             DateTime time1 = DateTime.Now;
 
             Note note2 = new Note("Vet", " yuy", "Sport", time,time1 );
-
+            
             note2.GetInfo();
 
             /// <summary>

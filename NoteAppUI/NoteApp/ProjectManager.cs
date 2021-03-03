@@ -16,7 +16,7 @@ namespace NoteApp
 
             JsonSerializer serializer = new JsonSerializer();
             //Открываем поток для записи в файл с указанием пути
-            using (StreamWriter sw = new StreamWriter(@"c:\json.txt"))
+            using (StreamWriter sw = new StreamWriter(@"json.txt"))
             using (JsonWriter writer = new JsonTextWriter(sw))
             {
                 //Вызываем сериализацию и передаем объект, который хотим сериализовать

@@ -69,7 +69,7 @@ namespace NoteApp
                 {
                     throw new ArgumentException("Текст ,временно, не может содержать более 1500 символов");
                 }
-                else _name = value;
+                else _text = value;
 
             }
         }
@@ -85,7 +85,7 @@ namespace NoteApp
                 {
                     throw new ArgumentException("Категория не должна содержать больше 50 символов ");
                 }
-                else _name = value;
+                else _categoryNotes = value;
 
             }
         }
