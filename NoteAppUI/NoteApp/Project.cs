@@ -8,6 +8,6 @@ namespace NoteApp
 {
     public class Project
     {
-        private Note[] notes;
+        public List<Note> Notes = new List<Note>();
     }
 }

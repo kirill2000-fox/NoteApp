@@ -52,6 +52,18 @@ namespace NoteAppUI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime time = DateTime.Now;
+            DateTime time1 = DateTime.Now;
+            Note note = new Note("123sfdfgs", "begg", "Sport", time, time1);
+            string defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/NoteApp/";
+            
+            Project serialize = new Project {Notes = {note}};
+            ProjectManager.SaveToFile(serialize, defaultPath);
+            Project deserialize = ProjectManager.LoadFromFile(defaultPath);
+        }
     }
 }
         

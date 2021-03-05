@@ -41,9 +41,15 @@ namespace NoteAppUI
             note2.CategoryNotes = "dsgfdsgfgfsdgsfssfdgssfdfasdfadsfdasfdsafadsafdsafdsafdsfsgfsgfsgfgsfsggsdggsfd";
             Console.WriteLine(note2.CategoryNotes);
 
-            Project project = new Project();
-            project.Note = new Note[2];
-            project.Note[0] = note2;
+            //Project project = new Project();
+            //project.notes = new Note[2]
+            //project.notes[0] = note2
+
+
+            //project.notes[1] = note2
+
+
+            //Serialisation(project)
 
         }
     }
