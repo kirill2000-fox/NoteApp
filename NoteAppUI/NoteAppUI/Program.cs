@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using NoteApp;
 
@@ -35,10 +33,10 @@ namespace NoteAppUI
             /// <summary>
             /// Проверка текста на вывод более 1500 символов.
             /// </summary>
-            note2.Text = "tghadsgfddffdgsdgsfsgfsdggssgfgsfsggsdggsfd";
+            note2.Text = "Здесь должен быть большой текст, больше 50 символов, поэтому я пишу это для проверки";
             Console.WriteLine(note2.Text);
 
-            note2.CategoryNotes = "dsgfdsgfgfsdgsfssfdgssfdfasdfadsfdasfdsafadsafdsafdsafdsfsgfsgfsgfgsfsggsdggsfd";
+            note2.CategoryNotes = "Здесь должен быть большой текст, больше 50 символов, поэтому я пишу это для проверки";
             Console.WriteLine(note2.CategoryNotes);
 
             //Project project = new Project();
