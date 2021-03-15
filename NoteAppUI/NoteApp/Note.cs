@@ -33,17 +33,15 @@ namespace NoteApp
         /// Время изменения
         /// </summary>
         private DateTime _timeChange;
-
-       
-       
-
-
+        
         /// <summary>
         /// Возвращает и задает имя заметки.
         /// </summary>
         public string Name
         {
-            get { return _name; }
+            get 
+            { return _name; }
+
             set
             {
                 if (value.Length > 50)
@@ -54,12 +52,15 @@ namespace NoteApp
 
             }
         }
+
         /// <summary>
         /// Возвращает и задает текст пользователя.
         /// </summary>
         public string Text
         {
-            get { return _text; }
+            get 
+            { return _text; }
+
             set
             {
                 if (value.Length > 1500)
@@ -70,12 +71,15 @@ namespace NoteApp
 
             }
         }
+
         /// <summary>
         /// Возвращает и задает категории пользователя.
         /// </summary>
         public string CategoryNotes
         {
-            get { return _categoryNotes; }
+            get 
+            { return _categoryNotes; }
+
             set
             {
                 if (value.Length > 50)
@@ -86,12 +90,14 @@ namespace NoteApp
 
             }
         }
+
         /// <summary>
         /// Задает время создания заметки
         /// </summary>
         public DateTime TimeCreation 
         {
-            get { return _timeCreation; }
+            get 
+            { return _timeCreation; }
             private set
             {
                 _timeCreation = value;
@@ -102,7 +108,9 @@ namespace NoteApp
         /// </summary>
         public DateTime TimeChange
         {
-            get { return _timeChange; }
+            get 
+            { return _timeChange; }
+
             private set
 
             {
