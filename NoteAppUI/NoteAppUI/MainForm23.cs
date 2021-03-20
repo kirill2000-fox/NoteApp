@@ -25,10 +25,6 @@ namespace NoteAppUI
 
         }
 
-       
-       
-
-
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -50,13 +46,13 @@ namespace NoteAppUI
             DateTime time1 = DateTime.Now;
             Note note = new Note("Pet", "All king`s horses", "Sport", time, time1);
 
-            //Получает путь к особой системной папке
+            // Получает путь к особой системной папке.
 
             string defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/NoteApp/";
             
             Project serialize = new Project {Notes = {note}};
-            ProjectManager.SaveToFile(serialize, defaultPath);
-            Project deserialize = ProjectManager.LoadFromFile(defaultPath);
+            ProjectManager.SaveToFile(serialize, ProjectManager.FileName);
+            Project deserialize = ProjectManager.LoadFromFile(ProjectManager.FileName);
         }
     }
 }

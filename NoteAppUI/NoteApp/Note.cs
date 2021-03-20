@@ -8,7 +8,6 @@ namespace NoteApp
     /// </summary>
     public class Note
     {
-
         /// <summary>
         /// Имя заметки.
         /// </summary>
@@ -17,22 +16,22 @@ namespace NoteApp
         /// <summary>
         /// Текст заметки.
         /// </summary>
-        private string _text;
+        private string _text = "Ввод текста";
 
         /// <summary>
         /// Категории заметки.
         /// </summary>
-        private string _categoryNotes;
+        private NoteCategory _noteCategory;
 
         /// <summary>
         /// Время создания
         /// </summary>
-        private DateTime _timeCreation;
+        private DateTime _timeCreated;
 
         /// <summary>
         /// Время изменения
         /// </summary>
-        private DateTime _timeChange;
+        private DateTime _timeModified;
         
         /// <summary>
         /// Возвращает и задает имя заметки.
@@ -47,8 +46,8 @@ namespace NoteApp
                 {
                     throw new ArgumentException("Название должно содержать не больше 50 символов ");
                 }
-                else _name = value;
 
+                _name = value;
             }
         }
 
@@ -65,57 +64,47 @@ namespace NoteApp
         /// <summary>
         /// Возвращает и задает категории пользователя.
         /// </summary>
-        public string CategoryNotes
+        public  NoteCategory Category
         {
-            get => _categoryNotes;
+            get => _noteCategory;
 
-            set
-            {
-                if (value.Length > 50)
-                {
-                    throw new ArgumentException("Категория не должна содержать больше 50 символов ");
-                }
-                else _categoryNotes = value;
-
-            }
+            set =>_noteCategory = value;
         }
 
         /// <summary>
         /// Задает время создания заметки
         /// </summary>
-        public DateTime TimeCreation 
+        public DateTime TimeCreated 
         {
-            get => _timeCreation;
-            private set => _timeCreation = value;
+            get => _timeCreated;
+            private set => _timeCreated = value;
         }
+
         /// <summary>
         /// Возвращает и задает время изменения
         /// </summary>
-        public DateTime TimeChange
+        public DateTime TimeModified
         {
-            get => _timeChange;
+            get => _timeModified;
 
-            private set => _timeChange = value;
+            private set => _timeModified = value;
         }
 
         /// <summary>
         /// Конструктор 
         /// </summary>
-
-        public Note(string name, string text, string categoryNotes, DateTime timeCreation, DateTime timeChange)
+        public Note(string name, string text, string noteCategory, DateTime timeCreated, DateTime timeModified)
         {
              Name = name;
              Text = text;
-             CategoryNotes = categoryNotes;
-             TimeCreation = timeCreation;
-             TimeChange = timeChange;
+             Category = _noteCategory;
+             TimeCreated = timeCreated;
+             TimeModified = timeModified;
         }
-        public void GetInfo()
+        public void GetInfo()// НУЖНО ИСПРАВИТЬ
         {
             Console.WriteLine(
-                $"Название:{_name} Текст:{_text} Категория заметки:{_categoryNotes} Время создания: {_timeCreation}  Время последнего изменения: {_timeChange}");
+                $"Название:{_name} Текст:{_text} Категория заметки:{_noteCategory} Время создания: {_timeCreated}  Время последнего изменения: {_timeModified}");
         }
-
-
     }
 }

@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 using System.IO;
 
 using Newtonsoft.Json;
@@ -11,19 +12,20 @@ namespace NoteApp
     /// </summary>
     public class ProjectManager
     {
-       
-        private const string FileName = "NoteApp.notes";
+        public static readonly string FileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"/NoteApp/NoteApp.notes";
         public static void SaveToFile(Project project, string path)
         {
-            Directory.CreateDirectory(path);
-            path += FileName;
             JsonSerializer serializer = new JsonSerializer();
-            //Открываем поток для записи в файл с указанием пути
-            using (StreamWriter sw = new StreamWriter(path))
+            if (!Directory.Exists(Path.GetDirectoryName(path)))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(path) ?? throw new InvalidOperationException());
+            }
+            // Открываем поток для записи в файл с указанием пути.
+            using (var sw = new StreamWriter(path))
             {
                 using (JsonTextWriter textWriter = new JsonTextWriter(sw))
                 {
-                    //Вызываем сериализацию и передаем объект, который хотим сериализовать
+                    // Вызываем сериализацию и передаем объект, который хотим сериализовать.
                     serializer.Serialize(textWriter, project);
                 }
             }
@@ -31,31 +33,17 @@ namespace NoteApp
 
         public static Project LoadFromFile(string path)
         {
-            path += FileName;
-            Project _project;
-            JsonSerializer serializer = new JsonSerializer();
-            using (StreamReader reader = new StreamReader(path))
+            var serializer = new JsonSerializer();
+            using (var reader = new StreamReader(path))
             {
-                using (JsonTextReader textReader = new JsonTextReader(reader))
+                using (var textReader = new JsonTextReader(reader))
                 {
-                    _project = (Project) serializer.Deserialize<Project>(textReader);
-                    if (_project == null)
-                    {
-                        _project = new Project();
-                    }
+                    var project = (Project) serializer.Deserialize<Project>(textReader) ?? new Project();
 
-                    return _project;
+                    return project;
                 }
             }
         }
-        //public void Serialisation()
-        //{
-        //    JsonSerializer serializer = new JsonSerializer();
-        //    using (StreamWriter sw = new StreamWriter(@"note.json")) ;
-        //    using (JsonWriter writer = JsonTextWriter(sw))
-        //    {
-        //        serializer.Serialize(writer, project);
-        //    }
-        //}
+       
     }
 }
