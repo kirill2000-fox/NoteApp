@@ -48,9 +48,9 @@ namespace NoteAppUI
             this.button1.Location = new System.Drawing.Point(7, 5);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 28);
+            this.button1.Size = new System.Drawing.Size(108, 28);
             this.button1.TabIndex = 0;
-            this.button1.Text = "File";
+            this.button1.Text = "Save File";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -58,7 +58,7 @@ namespace NoteAppUI
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(69, 5);
+            this.button2.Location = new System.Drawing.Point(108, 5);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(49, 28);
@@ -71,7 +71,7 @@ namespace NoteAppUI
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(135, 4);
+            this.button3.Location = new System.Drawing.Point(163, 2);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(47, 31);

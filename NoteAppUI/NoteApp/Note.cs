@@ -39,8 +39,7 @@ namespace NoteApp
         /// </summary>
         public string Name
         {
-            get 
-            { return _name; }
+            get => _name;
 
             set
             {
@@ -58,18 +57,9 @@ namespace NoteApp
         /// </summary>
         public string Text
         {
-            get 
-            { return _text; }
+            get => _text;
 
-            set
-            {
-                if (value.Length > 1500)
-                {
-                    throw new ArgumentException("Текст ,временно, не может содержать более 1500 символов");
-                }
-                else _text = value;
-
-            }
+            set => _text = value;
         }
 
         /// <summary>
@@ -77,8 +67,7 @@ namespace NoteApp
         /// </summary>
         public string CategoryNotes
         {
-            get 
-            { return _categoryNotes; }
+            get => _categoryNotes;
 
             set
             {
@@ -96,26 +85,17 @@ namespace NoteApp
         /// </summary>
         public DateTime TimeCreation 
         {
-            get 
-            { return _timeCreation; }
-            private set
-            {
-                _timeCreation = value;
-            }
+            get => _timeCreation;
+            private set => _timeCreation = value;
         }
         /// <summary>
         /// Возвращает и задает время изменения
         /// </summary>
         public DateTime TimeChange
         {
-            get 
-            { return _timeChange; }
+            get => _timeChange;
 
-            private set
-
-            {
-                _timeChange = value;
-            }
+            private set => _timeChange = value;
         }
 
         /// <summary>

@@ -48,7 +48,10 @@ namespace NoteAppUI
         {
             DateTime time = DateTime.Now;
             DateTime time1 = DateTime.Now;
-            Note note = new Note("123sfdfgs", "begg", "Sport", time, time1);
+            Note note = new Note("Pet", "All king`s horses", "Sport", time, time1);
+
+            //Получает путь к особой системной папке
+
             string defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/NoteApp/";
             
             Project serialize = new Project {Notes = {note}};

@@ -32,19 +32,19 @@ namespace NoteApp
         public static Project LoadFromFile(string path)
         {
             path += FileName;
-            Project project;
+            Project _project;
             JsonSerializer serializer = new JsonSerializer();
             using (StreamReader reader = new StreamReader(path))
             {
                 using (JsonTextReader textReader = new JsonTextReader(reader))
                 {
-                    project = (Project) serializer.Deserialize<Project>(textReader);
-                    if (project == null)
+                    _project = (Project) serializer.Deserialize<Project>(textReader);
+                    if (_project == null)
                     {
-                        project = new Project();
+                        _project = new Project();
                     }
 
-                    return project;
+                    return _project;
                 }
             }
         }

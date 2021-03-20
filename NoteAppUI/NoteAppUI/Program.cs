@@ -20,7 +20,7 @@ namespace NoteAppUI
             DateTime time = DateTime.Now;
             DateTime time1 = DateTime.Now;
 
-            Note note2 = new Note("Vet", " yuy", "Sport", time,time1 );
+            Note note2 = new Note("BIG", "My son is sleeping", "Sport", time,time1 );
             
             note2.GetInfo();
 
