@@ -48,10 +48,10 @@ namespace NoteAppUI
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(179, 6);
+            this.button1.Location = new System.Drawing.Point(217, 2);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 28);
+            this.button1.Size = new System.Drawing.Size(100, 30);
             this.button1.TabIndex = 0;
             this.button1.Text = "Save File";
             this.button1.UseVisualStyleBackColor = true;
@@ -61,10 +61,10 @@ namespace NoteAppUI
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(71, 10);
+            this.button2.Location = new System.Drawing.Point(65, 2);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 28);
+            this.button2.Size = new System.Drawing.Size(70, 30);
             this.button2.TabIndex = 1;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@ namespace NoteAppUI
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(126, 6);
+            this.button3.Location = new System.Drawing.Point(141, 2);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(47, 31);
+            this.button3.Size = new System.Drawing.Size(70, 30);
             this.button3.TabIndex = 2;
             this.button3.Text = "Help";
             this.button3.UseVisualStyleBackColor = true;
@@ -97,9 +97,9 @@ namespace NoteAppUI
             // 
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(1, 10);
+            this.button4.Location = new System.Drawing.Point(-1, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(70, 30);
             this.button4.TabIndex = 8;
             this.button4.Text = "File";
             this.button4.UseVisualStyleBackColor = true;
@@ -122,6 +122,7 @@ namespace NoteAppUI
             this.button5.Size = new System.Drawing.Size(47, 42);
             this.button5.TabIndex = 11;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -131,6 +132,7 @@ namespace NoteAppUI
             this.button6.Size = new System.Drawing.Size(47, 42);
             this.button6.TabIndex = 12;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -140,6 +142,7 @@ namespace NoteAppUI
             this.button7.Size = new System.Drawing.Size(45, 42);
             this.button7.TabIndex = 13;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // listBox1
             // 

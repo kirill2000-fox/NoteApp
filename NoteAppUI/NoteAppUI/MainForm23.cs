@@ -23,8 +23,18 @@ namespace NoteAppUI
 
         private void MainForm23_Load(object sender, EventArgs e)
         {
-           
-            
+
+            ToolTip createTip = new ToolTip(); 
+            createTip.SetToolTip(button5, "Создать заметку");
+
+            ToolTip changeTip = new ToolTip(); 
+            changeTip.SetToolTip(button6, "Изменить заметку");
+
+            ToolTip deleteTip = new ToolTip(); 
+            deleteTip.SetToolTip(button7, "Удалить заметку");
+
+            ToolTip saveTip  = new ToolTip(); 
+            saveTip.SetToolTip(button1, "Сохранить изменения в файл");
 
 
         }
@@ -90,6 +100,21 @@ namespace NoteAppUI
             //Note note = (Note)listBox1.SelectedItem;
 
             //textBox1.Text = note;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
