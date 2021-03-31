@@ -13,6 +13,7 @@ namespace NoteApp
     public class ProjectManager
     {
         public static readonly string FileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"/NoteApp/NoteApp.notes";
+
         public static void SaveToFile(Project project, string path)
         {
             JsonSerializer serializer = new JsonSerializer();

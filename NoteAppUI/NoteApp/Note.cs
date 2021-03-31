@@ -101,7 +101,12 @@ namespace NoteApp
              TimeCreated = timeCreated;
              TimeModified = timeModified;
         }
-        public void GetInfo()// НУЖНО ИСПРАВИТЬ
+
+        public Note()
+        {
+        }
+
+        public void GetInfo()// TODO: НУЖНО ИСПРАВИТЬ
         {
             Console.WriteLine(
                 $"Название:{_name} Текст:{_text} Категория заметки:{_noteCategory} Время создания: {_timeCreated}  Время последнего изменения: {_timeModified}");

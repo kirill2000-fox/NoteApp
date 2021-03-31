@@ -1,20 +1,24 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using NoteApp;
-
-
-
 
 namespace NoteAppUI
 {
 
     public partial class MainForm23 : Form
     {
+        private Project _project;
+        private Note _note = new Note();
+
         public MainForm23()
         {
-
             InitializeComponent();
-
+            comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
+            _project = ProjectManager.LoadFromFile(ProjectManager.FileName);
+            listBox1.DataSource = _project.Notes;
+            listBox1.DisplayMember = "name";
+            
         }
 
         private void MainForm23_Load(object sender, EventArgs e)
@@ -53,6 +57,39 @@ namespace NoteAppUI
             Project serialize = new Project {Notes = {note}};
             ProjectManager.SaveToFile(serialize, ProjectManager.FileName);
             Project deserialize = ProjectManager.LoadFromFile(ProjectManager.FileName);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //Note note = (Note)listBox1.SelectedItem;
+
+            //textBox1.Text = note;
         }
     }
 }

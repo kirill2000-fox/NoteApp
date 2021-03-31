@@ -25,7 +25,7 @@ namespace NoteAppUI
             note2.GetInfo();
 
             // Проверка имени на вывод более 50 символов.
-            note2.Name = "tghadsgfddffdgsdgfd2346634fgdfdsfdgdsgsfsgfsfdsgfgfssgfdsgfdsgf";
+            note2.Name = "tghadsgfddffdgssgfdsgfadgdgfsfdsfdsgfsgfdsgfsgfsgfsgfdgf";
             Console.WriteLine(note2.Name);
 
             // Проверка текста на вывод более 1500 символов.
