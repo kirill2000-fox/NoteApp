@@ -32,10 +32,11 @@ namespace NoteApp
         /// Время изменения
         /// </summary>
         private DateTime _timeModified;
-        
+
         /// <summary>
         /// Возвращает и задает имя заметки.
         /// </summary>
+        /// <exception cref="ArgumentException"></exception>
         public string Name
         {
             get => _name;
