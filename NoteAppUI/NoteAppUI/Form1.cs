@@ -1,18 +1,41 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 using NoteApp;
-
 
 
 namespace NoteAppUI
 {
     public partial class Form1 : Form
     {
-        public string TextBoxValue
+        private Note _noteData = new Note();
+
+        /// <summary>
+        /// Возвращает и задает данные формы
+        /// </summary>
+        public Note NoteData
         {
-            get { return textBox1.Text; }
-            set { textBox1.Text = value; }
+            get
+            {
+                return _noteData;
+            }
+            set
+            {
+                _noteData = value;
+                DisplayNote();
+            }
+        }
+
+        /// <summary>
+        /// Отображение данных в заметке.
+        /// </summary>
+        public void DisplayNote()
+        {
+            if (_noteData == null)
+            {
+                textBox2.Text = DateTime.Now.ToString();
+                textBox3.Text = DateTime.Now.ToString();
+                return;
+            }
         }
 
         public Form1()
@@ -32,6 +55,7 @@ namespace NoteAppUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
             this.Close();
         }
     }

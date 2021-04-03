@@ -47,8 +47,14 @@ namespace NoteApp
                 {
                     throw new ArgumentException("Название должно содержать не больше 50 символов ");
                 }
-
-                _name = value;
+                else
+                {
+                    if (value != String.Empty)
+                    {
+                        _name = value;
+                    }
+                    //= DateTime.Now;
+                }
             }
         }
 
@@ -107,10 +113,6 @@ namespace NoteApp
         {
         }
 
-        public void GetInfo()// TODO: НУЖНО ИСПРАВИТЬ
-        {
-            Console.WriteLine(
-                $"Название:{_name} Текст:{_text} Категория заметки:{_noteCategory} Время создания: {_timeCreated}  Время последнего изменения: {_timeModified}");
-        }
+       
     }
 }

@@ -18,10 +18,86 @@ namespace NoteAppUI
 
             comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
             _project = ProjectManager.LoadFromFile(ProjectManager.FileName);
+            if (_project == null)
+                _project = new Project();
+            UpdateNotesListBox();
             listBox1.DataSource = _project.Notes;
             listBox1.DisplayMember = "name";
             
         }
+
+        /// <summary>
+        /// Обновление списка заметок.
+        /// </summary>
+        private void UpdateNotesListBox()
+        {
+            listBox1.Items.Clear();
+            if (_project != null)
+            {
+                for (int i = 0; i < _project.Notes.Count; i++)
+                {
+                    if (_project.Notes[i].Name != "")
+                        listBox1.Items.Add(_project.Notes[i].Name);
+                    else
+                        listBox1.Items.Add("Без названия");
+                }
+
+            }
+        }
+
+        private void AddNote()
+        {
+            var addForm = new Form1();
+            addForm.ShowDialog();
+
+            if (addForm.DialogResult == DialogResult.OK)
+            {
+                var addedNote = addForm.NoteData;
+
+                _project.Notes.Add(addedNote);
+                //listBox1.Items.Add(addedNote);
+                UpdateNotesListBox();
+            }
+            else return;
+        }
+
+        private void EditNote()
+        {
+            var selectedIndex = listBox1.SelectedIndex;
+            if (selectedIndex == -1)
+            {
+                MessageBox.Show("Не выбрана запись для редактирования", "Ошибка", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                var selectedNote = _project.Notes[selectedIndex];
+
+                var editForm = new Form1();
+                editForm.NoteData = selectedNote;
+                editForm.ShowDialog();
+
+                if (editForm.DialogResult == DialogResult.OK)
+                {
+                    var editedNote = editForm.NoteData;
+
+                    _project.Notes.Insert(selectedIndex, editedNote);
+                    listBox1.Items.Insert(selectedIndex, editedNote.Name);
+                    _project.Notes.RemoveAt(selectedIndex + 1);
+                    UpdateNotesListBox();
+                    listBox1.SetSelected(selectedIndex, true);
+                }
+                else return;
+            }
+            catch
+            {
+                MessageBox.Show("Запись не найдена", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         public MainForm23(string text) // <-- Новый конструктор формы
         {
             InitializeComponent();
@@ -29,6 +105,7 @@ namespace NoteAppUI
         }
         
         private void MainForm23_Load(object sender, EventArgs e)
+        
         {
             MessageBox.Show("Создайте свою заметку!", "Добро Пожаловать");
                 
@@ -46,6 +123,25 @@ namespace NoteAppUI
             saveTip.SetToolTip(button1, "Сохранить изменения в файл");
 
 
+        }
+        private void RemoveNote()
+        {
+            var selectedIdex = listBox1.SelectedIndex;
+            if (selectedIdex == -1)
+            {
+                MessageBox.Show("Не выбрана запись для удаления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var dialogResult = MessageBox.Show("Вы дейcтвительно хотите удалить запись?", "Удаление записи", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.OK)
+            {
+                _project.Notes.RemoveAt(selectedIdex);
+                UpdateNotesListBox();
+            }
+
+          
+            ProjectManager.SaveToFile(_project, ProjectManager.FileName);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -116,8 +212,9 @@ namespace NoteAppUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            F1.ShowDialog();
-            MessageBox.Show(F1.TextBoxValue);
+            //F1.ShowDialog();
+            
+            AddNote();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -127,7 +224,7 @@ namespace NoteAppUI
 
         private void button7_Click(object sender, EventArgs e)
         {
-            F1.TextBoxValue = String.Empty;
+           EditNote();
         }
 
         private void button8_Click_1(object sender, EventArgs e)
@@ -144,6 +241,16 @@ namespace NoteAppUI
         private void button10_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
