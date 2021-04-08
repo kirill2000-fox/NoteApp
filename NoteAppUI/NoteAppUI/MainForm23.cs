@@ -18,10 +18,8 @@ namespace NoteAppUI
 
             comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
             _project = ProjectManager.LoadFromFile(ProjectManager.FileName);
-            if (_project == null)
-                _project = new Project();
+           
             UpdateNotesListBox();
-            listBox1.DataSource = _project.Notes;
             listBox1.DisplayMember = "name";
             
         }
@@ -55,10 +53,12 @@ namespace NoteAppUI
                 var addedNote = addForm.NoteData;
 
                 _project.Notes.Add(addedNote);
-                //listBox1.Items.Add(addedNote);
+                listBox1.Items.Add(addedNote);
                 UpdateNotesListBox();
             }
             else return;
+
+            ProjectManager.SaveToFile(_project, ProjectManager.FileName);
         }
 
         private void EditNote()
@@ -107,9 +107,6 @@ namespace NoteAppUI
         private void MainForm23_Load(object sender, EventArgs e)
         
         {
-            MessageBox.Show("Создайте свою заметку!", "Добро Пожаловать");
-                
-
             ToolTip createTip = new ToolTip(); 
             createTip.SetToolTip(button5, "Создать заметку");
 
@@ -146,9 +143,7 @@ namespace NoteAppUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Информацию о ваших проблемах вы можете найти на сайте http//...", "Help",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Information);
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -205,26 +200,22 @@ namespace NoteAppUI
 
         private void listBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            //Note note = (Note)listBox1.SelectedItem;
-
-            //textBox1.Text = note;
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //F1.ShowDialog();
-            
             AddNote();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            F1.ShowDialog();
+            EditNote();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-           EditNote();
+            RemoveNote();
         }
 
         private void button8_Click_1(object sender, EventArgs e)
