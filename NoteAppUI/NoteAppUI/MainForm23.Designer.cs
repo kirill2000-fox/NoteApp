@@ -75,7 +75,7 @@ namespace NoteAppUI
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(141, 2);
+            this.button3.Location = new System.Drawing.Point(132, 2);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 30);
@@ -83,6 +83,7 @@ namespace NoteAppUI
             this.button3.Text = "Help";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button3_KeyDown);
             // 
             // comboBox1
             // 
