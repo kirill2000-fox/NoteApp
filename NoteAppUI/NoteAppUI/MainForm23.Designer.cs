@@ -69,7 +69,7 @@ namespace NoteAppUI
             this.button2.TabIndex = 1;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // button3
             // 
@@ -82,7 +82,7 @@ namespace NoteAppUI
             this.button3.TabIndex = 2;
             this.button3.Text = "Help";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.buttonHelp_Click);
             this.button3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button3_KeyDown);
             // 
             // comboBox1
@@ -105,7 +105,7 @@ namespace NoteAppUI
             this.button4.TabIndex = 8;
             this.button4.Text = "File";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.buttonFile_Click);
             // 
             // label1
             // 
@@ -124,7 +124,7 @@ namespace NoteAppUI
             this.button5.Size = new System.Drawing.Size(47, 42);
             this.button5.TabIndex = 11;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Add_Click);
             // 
             // button6
             // 
@@ -134,7 +134,7 @@ namespace NoteAppUI
             this.button6.Size = new System.Drawing.Size(47, 42);
             this.button6.TabIndex = 12;
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.Edit_Click);
             // 
             // button7
             // 
@@ -144,7 +144,7 @@ namespace NoteAppUI
             this.button7.Size = new System.Drawing.Size(45, 42);
             this.button7.TabIndex = 13;
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.Remove_Click);
             // 
             // listBox1
             // 

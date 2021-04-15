@@ -141,18 +141,13 @@ namespace NoteAppUI
             ProjectManager.SaveToFile(_project, ProjectManager.FileName);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonHelp_Click(object sender, EventArgs e)
         {
             About frm = new About();
             frm.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
 
         }
@@ -162,17 +157,12 @@ namespace NoteAppUI
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonFile_Click(object sender, EventArgs e)
         {
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -193,35 +183,19 @@ namespace NoteAppUI
            
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Add_Click(object sender, EventArgs e)
         {
             AddNote();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Edit_Click(object sender, EventArgs e)
         {
             EditNote();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Remove_Click(object sender, EventArgs e)
         {
             RemoveNote();
-        }
-
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-
-           
-        }
-
-        private void button9_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button10_Click_1(object sender, EventArgs e)
-        {
-            
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
