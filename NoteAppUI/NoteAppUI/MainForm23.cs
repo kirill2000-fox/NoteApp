@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 using NoteApp;
 
@@ -51,7 +50,6 @@ namespace NoteAppUI
             if (addForm.DialogResult == DialogResult.OK)
             {
                 var addedNote = addForm.NoteData;
-
                 _project.Notes.Add(addedNote);
                 listBox1.Items.Add(addedNote);
                 UpdateNotesListBox();
@@ -88,6 +86,7 @@ namespace NoteAppUI
                     _project.Notes.RemoveAt(selectedIndex + 1);
                     UpdateNotesListBox();
                     listBox1.SetSelected(selectedIndex, true);
+                    ProjectManager.SaveToFile(_project, ProjectManager.FileName);
                 }
                 else return;
             }
@@ -101,7 +100,7 @@ namespace NoteAppUI
         public MainForm23(string text) // <-- Новый конструктор формы
         {
             InitializeComponent();
-            textBox1.Text = text;
+            
         }
         
         private void MainForm23_Load(object sender, EventArgs e)
@@ -113,13 +112,8 @@ namespace NoteAppUI
             ToolTip changeTip = new ToolTip(); 
             changeTip.SetToolTip(button6, "Изменить заметку");
 
-            ToolTip deleteTip = new ToolTip(); 
+            ToolTip deleteTip = new ToolTip();
             deleteTip.SetToolTip(button7, "Удалить заметку");
-
-            ToolTip saveTip  = new ToolTip(); 
-            saveTip.SetToolTip(button1, "Сохранить изменения в файл");
-
-
         }
         private void RemoveNote()
         {
@@ -185,7 +179,12 @@ namespace NoteAppUI
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // получение заметки
+            var selectedNote = (Note)listBox1.SelectedItem;
 
+
+            dateTimePicker1.Value = selectedNote.TimeCreated;
+            dateTimePicker2.Value = selectedNote.TimeModified;
         }
 
         private void listBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -193,7 +192,7 @@ namespace NoteAppUI
            
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             AddNote();
         }
@@ -236,6 +235,19 @@ namespace NoteAppUI
 
         private void button3_KeyDown(object sender, KeyEventArgs e)
         {
+        }
+        //вывод значения
+        private void Click_listBox1(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                textBox3.Text = _project.Notes[listBox1.SelectedIndex].Text;
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

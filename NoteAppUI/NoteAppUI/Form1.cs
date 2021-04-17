@@ -21,7 +21,6 @@ namespace NoteAppUI
             set
             {
                 _noteData = value;
-                DisplayNote();
             }
         }
 
@@ -30,21 +29,19 @@ namespace NoteAppUI
         /// </summary>
         public void DisplayNote()
         {
-            if (_noteData == null)
-            {
-                textBox2.Text = DateTime.Now.ToString();
-                textBox3.Text = DateTime.Now.ToString();
-                return;
-            }
+
         }
 
         public Form1()
         {
             InitializeComponent();
+            DisplayNote();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = NoteData.TimeCreated;
+            dateTimePicker2.Value = NoteData.TimeModified;
 
         }
 
@@ -59,9 +56,6 @@ namespace NoteAppUI
                 MessageBox.Show(exceptionText.Message, "Превышение длины строки", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox1.Text = _noteData.Name;
             }
-            
-            _noteData.Text = textBox1.Text;
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,8 +72,17 @@ namespace NoteAppUI
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
+            _noteData.Text = textBox4.Text;
+        }
 
-  
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
