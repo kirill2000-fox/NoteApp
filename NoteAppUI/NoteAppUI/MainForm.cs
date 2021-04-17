@@ -6,12 +6,12 @@ using NoteApp;
 namespace NoteAppUI
 {
 
-    public partial class MainForm23 : Form
+    public partial class MainForm : Form
     {
         private Project _project;
         private Note _note = new Note();
         private Form1 F1 = new Form1();
-        public MainForm23()
+        public MainForm()
         { 
             InitializeComponent();
 
@@ -97,7 +97,7 @@ namespace NoteAppUI
 
         }
 
-        public MainForm23(string text) // <-- Новый конструктор формы
+        public MainForm(string text) // <-- Новый конструктор формы
         {
             InitializeComponent();
             

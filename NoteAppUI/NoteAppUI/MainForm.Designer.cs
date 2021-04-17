@@ -1,7 +1,7 @@
 ﻿
 namespace NoteAppUI
 {
-    partial class MainForm23
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,7 +29,7 @@ namespace NoteAppUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm23));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
