@@ -12,7 +12,7 @@ namespace NoteAppUI
         private Note _note = new Note();
         private Form1 F1 = new Form1();
         public MainForm23()
-        {
+        { 
             InitializeComponent();
 
             comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
