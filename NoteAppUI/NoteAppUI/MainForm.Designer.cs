@@ -51,6 +51,7 @@ namespace NoteAppUI
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -115,6 +116,8 @@ namespace NoteAppUI
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(12, 396);
+            this.button5.MaximumSize = new System.Drawing.Size(47, 42);
+            this.button5.MinimumSize = new System.Drawing.Size(47, 42);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(47, 42);
             this.button5.TabIndex = 11;
@@ -123,8 +126,13 @@ namespace NoteAppUI
             // 
             // button6
             // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.Location = new System.Drawing.Point(65, 396);
+            this.button6.MaximumSize = new System.Drawing.Size(47, 42);
+            this.button6.MinimumSize = new System.Drawing.Size(47, 42);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(47, 42);
             this.button6.TabIndex = 12;
@@ -135,8 +143,10 @@ namespace NoteAppUI
             // 
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.Location = new System.Drawing.Point(118, 396);
+            this.button7.MaximumSize = new System.Drawing.Size(47, 42);
+            this.button7.MinimumSize = new System.Drawing.Size(47, 42);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 42);
+            this.button7.Size = new System.Drawing.Size(47, 42);
             this.button7.TabIndex = 13;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -175,9 +185,9 @@ namespace NoteAppUI
             this.dateTimePicker2.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(579, 46);
+            this.dateTimePicker2.Location = new System.Drawing.Point(367, 51);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(142, 22);
             this.dateTimePicker2.TabIndex = 19;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
@@ -187,18 +197,17 @@ namespace NoteAppUI
             this.dateTimePicker1.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(320, 46);
+            this.dateTimePicker1.Location = new System.Drawing.Point(92, 51);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(143, 22);
             this.dateTimePicker1.TabIndex = 18;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(333, 26);
+            this.label3.Location = new System.Drawing.Point(28, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 21;
@@ -206,11 +215,9 @@ namespace NoteAppUI
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(634, 26);
+            this.label2.Location = new System.Drawing.Point(300, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 20;
@@ -244,6 +251,10 @@ namespace NoteAppUI
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.dateTimePicker2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -256,13 +267,9 @@ namespace NoteAppUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
@@ -281,6 +288,8 @@ namespace NoteAppUI
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
