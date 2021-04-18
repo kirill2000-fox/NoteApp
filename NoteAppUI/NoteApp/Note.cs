@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Newtonsoft.Json;
 
 
 namespace NoteApp
@@ -53,7 +54,7 @@ namespace NoteApp
                     if (value != String.Empty)
                     {
                         _name = value;
-                       
+                        ModifyTime();
                     }
                     
                 }
@@ -67,7 +68,8 @@ namespace NoteApp
         {
             get => _text;
 
-            set => _text = value;
+            set { _text = value; ModifyTime(); }
+
         }
 
         /// <summary>
@@ -77,7 +79,9 @@ namespace NoteApp
         {
             get => _noteCategory;
 
-            set =>_noteCategory = value;
+            set 
+            { _noteCategory = value; 
+                ModifyTime(); }
         }
 
         /// <summary>
@@ -100,17 +104,34 @@ namespace NoteApp
         }
 
         /// <summary>
-        /// Конструктор 
+        /// Конструктор 1
         /// </summary>
-        public Note(string name = "Без Названия", NoteCategory? noteCategory = null, string text = "")
+        /// <param name="name"></param>
+        /// <param name="noteCategory"></param>
+        /// <param name="text"></param>
+        public Note(string name = "Без Названия", NoteCategory? noteCategory = null, string text = "") :
+            this(name, noteCategory, text, DateTime.Now, DateTime.Now)
         {
-             Name = name;
-             Text = text;
-             Category = noteCategory ?? (NoteCategory)Enum.GetValues(typeof(NoteCategory)).GetValue(0);
-             TimeCreated = DateTime.Now;
-             TimeModified = DateTime.Now;
+
         }
 
+    /// <summary>
+    /// Конструктор 2
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="noteCategory"></param>
+    /// <param name="text"></param>
+    /// <param name="timeCreated"></param>
+    /// <param name="timeModified"></param>
+    [JsonConstructor]
+    private Note(string name , NoteCategory? noteCategory, string text, DateTime timeCreated, DateTime timeModified)
+    {
+        Name = name;
+        Category = noteCategory ?? (NoteCategory)Enum.GetValues(typeof(NoteCategory)).GetValue(0);
+        Text = text;
+        TimeCreated = timeCreated;
+        TimeModified = timeModified;
+    }
         /// <summary>
         /// Метод изменения времени последнего изменения заметки
         /// </summary>

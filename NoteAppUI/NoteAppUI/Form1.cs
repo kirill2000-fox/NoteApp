@@ -74,7 +74,8 @@ namespace NoteAppUI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            _noteData.Name = textBox1.Text;
+            dateTimePicker2.Value = _noteData.TimeModified;
         }
     }
 }

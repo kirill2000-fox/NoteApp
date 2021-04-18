@@ -38,8 +38,10 @@ namespace NoteAppUI
                     else
                         listBox1.Items.Add("Без названия");
                 }
-
-                listBox1.SelectedItem = listBox1.Items[0];
+                if (_project.Notes.Count != 0)
+                {
+                    listBox1.SelectedItem = listBox1.Items[0];
+                }
             }
         }
 
@@ -169,11 +171,6 @@ namespace NoteAppUI
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-
-        }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -252,6 +249,7 @@ namespace NoteAppUI
         {
 
         }
+       
     }
 }
         
