@@ -249,7 +249,16 @@ namespace NoteAppUI
         {
 
         }
-       
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
         
