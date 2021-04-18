@@ -45,19 +45,6 @@ namespace NoteAppUI
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                _noteData.Name = textBox1.Text;
-            }
-            catch (Exception exceptionText)
-            {
-                MessageBox.Show(exceptionText.Message, "Превышение длины строки", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBox1.Text = _noteData.Name;
-            }
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -81,6 +68,11 @@ namespace NoteAppUI
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

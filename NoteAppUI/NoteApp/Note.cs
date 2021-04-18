@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 
 namespace NoteApp
@@ -52,8 +53,9 @@ namespace NoteApp
                     if (value != String.Empty)
                     {
                         _name = value;
+                       
                     }
-                    //= DateTime.Now;
+                    
                 }
             }
         }
@@ -100,19 +102,23 @@ namespace NoteApp
         /// <summary>
         /// Конструктор 
         /// </summary>
-        public Note(string name, string text, string noteCategory, DateTime timeCreated, DateTime timeModified)
+        public Note(string name = "Без Названия", NoteCategory? noteCategory = null, string text = "")
         {
              Name = name;
              Text = text;
-             Category = _noteCategory;
-             TimeCreated = timeCreated;
-             TimeModified = timeModified;
+             Category = noteCategory ?? (NoteCategory)Enum.GetValues(typeof(NoteCategory)).GetValue(0);
+             TimeCreated = DateTime.Now;
+             TimeModified = DateTime.Now;
         }
 
-        public Note()
+        /// <summary>
+        /// Метод изменения времени последнего изменения заметки
+        /// </summary>
+        private void ModifyTime()
         {
+            TimeModified = DateTime.Now;
         }
 
-       
+
     }
 }

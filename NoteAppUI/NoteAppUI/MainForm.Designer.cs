@@ -57,7 +57,6 @@ namespace NoteAppUI
             this.button2.TabIndex = 1;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
-            
             // 
             // button3
             // 
@@ -158,7 +157,9 @@ namespace NoteAppUI
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(286, 40);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
@@ -167,11 +168,14 @@ namespace NoteAppUI
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(588, 40);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 19;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label2
             // 
@@ -191,7 +195,7 @@ namespace NoteAppUI
             this.label3.TabIndex = 21;
             this.label3.Text = "Created";
             // 
-            // MainForm23
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,7 +217,7 @@ namespace NoteAppUI
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "MainForm23";
+            this.Name = "MainForm";
             this.Text = "NoteApp";
             this.Load += new System.EventHandler(this.MainForm23_Load);
             this.ResumeLayout(false);

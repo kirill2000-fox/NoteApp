@@ -97,6 +97,8 @@ namespace NoteAppUI
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd.MM.yyyyy HH:mm";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(301, 73);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
@@ -105,6 +107,8 @@ namespace NoteAppUI
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CustomFormat = "dd.MM.yyyyy HH:mm";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(567, 73);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);

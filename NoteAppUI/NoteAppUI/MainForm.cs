@@ -34,11 +34,12 @@ namespace NoteAppUI
                 for (int i = 0; i < _project.Notes.Count; i++)
                 {
                     if (_project.Notes[i].Name != "")
-                        listBox1.Items.Add(_project.Notes[i].Name);
+                        listBox1.Items.Add(_project.Notes[i]);
                     else
                         listBox1.Items.Add("Без названия");
                 }
 
+                listBox1.SelectedItem = listBox1.Items[0];
             }
         }
 
@@ -245,6 +246,11 @@ namespace NoteAppUI
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
