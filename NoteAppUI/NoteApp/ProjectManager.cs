@@ -32,6 +32,9 @@ namespace NoteApp
             }
         }
 
+        /// <summary>
+        /// Загрузка файла
+        /// </summary>
         public static Project LoadFromFile(string path)
         {
             Project project ;

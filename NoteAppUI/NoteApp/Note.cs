@@ -54,7 +54,7 @@ namespace NoteApp
                     if (value != String.Empty)
                     {
                         _name = value;
-                        ModifyTime();
+                        _timeModified = DateTime.Now;
                     }
                     
                 }
@@ -68,7 +68,7 @@ namespace NoteApp
         {
             get => _text;
 
-            set { _text = value; ModifyTime(); }
+            set { _text = value; _timeModified = DateTime.Now; }
 
         }
 
@@ -80,8 +80,9 @@ namespace NoteApp
             get => _noteCategory;
 
             set 
-            { _noteCategory = value; 
-                ModifyTime(); }
+            { _noteCategory = value;
+                _timeModified = DateTime.Now;
+            }
         }
 
         /// <summary>
@@ -109,7 +110,7 @@ namespace NoteApp
         /// <param name="name"></param>
         /// <param name="noteCategory"></param>
         /// <param name="text"></param>
-        public Note(string name = "Без Названия", NoteCategory? noteCategory = null, string text = "") :
+        public Note(NoteCategory noteCategory, string name = "Без Названия", string text = "") :
             this(name, noteCategory, text, DateTime.Now, DateTime.Now)
         {
 
@@ -119,15 +120,15 @@ namespace NoteApp
     /// Конструктор 2
     /// </summary>
     /// <param name="name"></param>
-    /// <param name="noteCategory"></param>
+    /// <param name="category"></param>
     /// <param name="text"></param>
     /// <param name="timeCreated"></param>
     /// <param name="timeModified"></param>
     [JsonConstructor]
-    private Note(string name , NoteCategory? noteCategory, string text, DateTime timeCreated, DateTime timeModified)
+    private Note(string name , NoteCategory category, string text, DateTime timeCreated, DateTime timeModified)
     {
         Name = name;
-        Category = noteCategory ?? (NoteCategory)Enum.GetValues(typeof(NoteCategory)).GetValue(0);
+        Category = category;
         Text = text;
         TimeCreated = timeCreated;
         TimeModified = timeModified;
@@ -135,10 +136,10 @@ namespace NoteApp
         /// <summary>
         /// Метод изменения времени последнего изменения заметки
         /// </summary>
-        private void ModifyTime()
-        {
-            TimeModified = DateTime.Now;
-        }
+        //private void ModifyTime()
+        //{
+        //    TimeModified = DateTime.Now;
+        //}
 
 
     }

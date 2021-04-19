@@ -9,10 +9,11 @@ namespace NoteAppUI
     public partial class MainForm : Form
     {
         private Project _project;
-        private Note _note = new Note();
-        private Form1 F1 = new Form1();
+        private Note _note = new Note(NoteCategory.Documents);
+        private NoteForm F1 = new NoteForm();
         public MainForm()
-        { 
+        {
+
             InitializeComponent();
 
             comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
@@ -44,10 +45,12 @@ namespace NoteAppUI
                 }
             }
         }
-
+        /// <summary>
+        /// Функция добавления заметки
+        /// </summary>
         private void AddNote()
         {
-            var addForm = new Form1();
+            var addForm = new NoteForm();
             addForm.ShowDialog();
 
             if (addForm.DialogResult == DialogResult.OK)
@@ -62,6 +65,9 @@ namespace NoteAppUI
             ProjectManager.SaveToFile(_project, ProjectManager.FileName);
         }
 
+        /// <summary>
+        /// Функция редактирования заметки
+        /// </summary>
         private void EditNote()
         {
             var selectedIndex = listBox1.SelectedIndex;
@@ -76,7 +82,7 @@ namespace NoteAppUI
             {
                 var selectedNote = _project.Notes[selectedIndex];
 
-                var editForm = new Form1();
+                var editForm = new NoteForm();
                 editForm.NoteData = selectedNote;
                 editForm.ShowDialog();
 
@@ -84,9 +90,9 @@ namespace NoteAppUI
                 {
                     var editedNote = editForm.NoteData;
 
+                    _project.Notes.RemoveAt(selectedIndex);
                     _project.Notes.Insert(selectedIndex, editedNote);
                     listBox1.Items.Insert(selectedIndex, editedNote.Name);
-                    _project.Notes.RemoveAt(selectedIndex + 1);
                     UpdateNotesListBox();
                     listBox1.SetSelected(selectedIndex, true);
                     ProjectManager.SaveToFile(_project, ProjectManager.FileName);
@@ -100,24 +106,9 @@ namespace NoteAppUI
 
         }
 
-        public MainForm(string text) // <-- Новый конструктор формы
-        {
-            InitializeComponent();
-            
-        }
-        
-        private void MainForm23_Load(object sender, EventArgs e)
-        
-        {
-            ToolTip createTip = new ToolTip(); 
-            createTip.SetToolTip(button5, "Создать заметку");
-
-            ToolTip changeTip = new ToolTip(); 
-            changeTip.SetToolTip(button6, "Изменить заметку");
-
-            ToolTip deleteTip = new ToolTip();
-            deleteTip.SetToolTip(button7, "Удалить заметку");
-        }
+        /// <summary>
+        /// Функция удаления заметки
+        /// </summary>
         private void RemoveNote()
         {
             var selectedIdex = listBox1.SelectedIndex;
@@ -134,103 +125,74 @@ namespace NoteAppUI
                 UpdateNotesListBox();
             }
 
-          
+
             ProjectManager.SaveToFile(_project, ProjectManager.FileName);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public MainForm(string text) // <-- Новый конструктор формы
+        {
+            InitializeComponent();
+            
+        }
+        
+        private void MainForm_Load(object sender, EventArgs e)
+        
+        {
+            ToolTip createTip = new ToolTip(); 
+            createTip.SetToolTip(button5, "Создать заметку");
+
+            ToolTip changeTip = new ToolTip(); 
+            changeTip.SetToolTip(button6, "Изменить заметку");
+
+            ToolTip deleteTip = new ToolTip();
+            deleteTip.SetToolTip(button7, "Удалить заметку");
+        }
+
+
+        /// <summary>
+        /// Кнопка "О заметки"
+        /// </summary>
+        private void buttonAbout_Click(object sender, EventArgs e)
         {
             About frm = new About();
             frm.ShowDialog();
         }
-
-       
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
+        
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             // получение заметки
             var selectedNote = (Note)listBox1.SelectedItem;
 
-
+            label4.Text = selectedNote.Name;
+            label6.Text = selectedNote.Category.ToString();
             dateTimePicker1.Value = selectedNote.TimeCreated;
             dateTimePicker2.Value = selectedNote.TimeModified;
         }
 
-        private void listBox1_SelectedValueChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+        /// <summary>
+        /// Кнопка добавления земетки
+        /// </summary>
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             AddNote();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Кнопка изменения земетки
+        /// </summary>
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
             EditNote();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Кнопка удаления земетки
+        /// </summary>
+        private void buttonRemove_Click(object sender, EventArgs e)
         {
             RemoveNote();
         }
 
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-
-           
-        }
-
-        private void button9_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button10_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_KeyDown(object sender, KeyEventArgs e)
-        {
-        }
         //вывод значения
         private void Click_listBox1(object sender, EventArgs e)
         {
@@ -240,22 +202,28 @@ namespace NoteAppUI
             }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About frm = new About();
+            frm.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

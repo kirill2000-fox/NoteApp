@@ -5,9 +5,9 @@ using NoteApp;
 
 namespace NoteAppUI
 {
-    public partial class Form1 : Form
+    public partial class NoteForm : Form
     {
-        private Note _noteData = new Note();
+        private Note _noteData = new Note(NoteCategory.Documents);
 
         /// <summary>
         /// Возвращает и задает данные формы
@@ -24,27 +24,25 @@ namespace NoteAppUI
             }
         }
 
-        /// <summary>
-        /// Отображение данных в заметке.
-        /// </summary>
-        public void DisplayNote()
-        {
-
-        }
-
-        public Form1()
+        public NoteForm()
         {
             InitializeComponent();
-            DisplayNote();
+            comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void NoteForm_Load(object sender, EventArgs e)
         {
+            comboBox1.SelectedItem = _noteData.Category;
+            textBox1.Text = _noteData.Name;
+            textBox4.Text = _noteData.Text;
             dateTimePicker1.Value = NoteData.TimeCreated;
             dateTimePicker2.Value = NoteData.TimeModified;
 
         }
 
+        /// <summary>
+        /// Кнопка выхода из заметки
+        /// </summary>
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -61,21 +59,18 @@ namespace NoteAppUI
         {
             _noteData.Text = textBox4.Text;
         }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             _noteData.Name = textBox1.Text;
-            dateTimePicker2.Value = _noteData.TimeModified;
+            //dateTimePicker2.Value = _noteData.TimeModified;
+        }
+
+        /// <summary>
+        /// Выбор категории
+        /// </summary>
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _noteData.Category = (NoteCategory)comboBox1.SelectedItem;
         }
     }
 }
