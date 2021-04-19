@@ -18,9 +18,9 @@ namespace NoteAppUI
 
             comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
             _project = ProjectManager.LoadFromFile(ProjectManager.FileName);
-           
+            
             UpdateNotesListBox();
-            listBox1.DisplayMember = "name";
+            NotelistBox.DisplayMember = "name";
             
         }
 
@@ -29,19 +29,19 @@ namespace NoteAppUI
         /// </summary>
         private void UpdateNotesListBox()
         {
-            listBox1.Items.Clear();
+            NotelistBox.Items.Clear();
             if (_project != null)
             {
                 for (int i = 0; i < _project.Notes.Count; i++)
                 {
                     if (_project.Notes[i].Name != "")
-                        listBox1.Items.Add(_project.Notes[i]);
+                        NotelistBox.Items.Add(_project.Notes[i]);
                     else
-                        listBox1.Items.Add("Без названия");
+                        NotelistBox.Items.Add("Без названия");
                 }
                 if (_project.Notes.Count != 0)
                 {
-                    listBox1.SelectedItem = listBox1.Items[0];
+                    NotelistBox.SelectedItem = NotelistBox.Items[0];
                 }
             }
         }
@@ -57,7 +57,7 @@ namespace NoteAppUI
             {
                 var addedNote = addForm.NoteData;
                 _project.Notes.Add(addedNote);
-                listBox1.Items.Add(addedNote);
+                NotelistBox.Items.Add(addedNote);
                 UpdateNotesListBox();
             }
             else return;
@@ -70,7 +70,7 @@ namespace NoteAppUI
         /// </summary>
         private void EditNote()
         {
-            var selectedIndex = listBox1.SelectedIndex;
+            var selectedIndex = NotelistBox.SelectedIndex;
             if (selectedIndex == -1)
             {
                 MessageBox.Show("Не выбрана запись для редактирования", "Ошибка", MessageBoxButtons.OK,
@@ -92,9 +92,9 @@ namespace NoteAppUI
 
                     _project.Notes.RemoveAt(selectedIndex);
                     _project.Notes.Insert(selectedIndex, editedNote);
-                    listBox1.Items.Insert(selectedIndex, editedNote.Name);
+                    NotelistBox.Items.Insert(selectedIndex, editedNote.Name);
                     UpdateNotesListBox();
-                    listBox1.SetSelected(selectedIndex, true);
+                    NotelistBox.SetSelected(selectedIndex, true);
                     ProjectManager.SaveToFile(_project, ProjectManager.FileName);
                 }
                 else return;
@@ -111,7 +111,7 @@ namespace NoteAppUI
         /// </summary>
         private void RemoveNote()
         {
-            var selectedIdex = listBox1.SelectedIndex;
+            var selectedIdex = NotelistBox.SelectedIndex;
             if (selectedIdex == -1)
             {
                 MessageBox.Show("Не выбрана запись для удаления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -134,7 +134,10 @@ namespace NoteAppUI
             InitializeComponent();
             
         }
-        
+
+        /// <summary>
+        /// Текстовая метка
+        /// </summary>
         private void MainForm_Load(object sender, EventArgs e)
         
         {
@@ -158,10 +161,10 @@ namespace NoteAppUI
             frm.ShowDialog();
         }
         
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void NotelistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // получение заметки
-            var selectedNote = (Note)listBox1.SelectedItem;
+            var selectedNote = (Note)NotelistBox.SelectedItem;
 
             label4.Text = selectedNote.Name;
             label6.Text = selectedNote.Category.ToString();
@@ -194,38 +197,20 @@ namespace NoteAppUI
         }
 
         //вывод значения
-        private void Click_listBox1(object sender, EventArgs e)
+        private void Click_NotelistBox(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (NotelistBox.SelectedIndex != -1)
             {
-                textBox3.Text = _project.Notes[listBox1.SelectedIndex].Text;
+                textBox3.Text = _project.Notes[NotelistBox.SelectedIndex].Text;
             }
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Помощь и информация
+        /// </summary>
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             About frm = new About();
             frm.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

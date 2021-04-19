@@ -49,26 +49,35 @@ namespace NoteAppUI
             this.Close();
         }
 
+        /// <summary>
+        /// Кнопка Ok, закрывающая изменения
+        /// </summary>
         private void buttonOK_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Поле текста заметки
+        /// </summary>
+        private void TextBox_TextChanged(object sender, EventArgs e)
         {
             _noteData.Text = textBox4.Text;
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        /// <summary>
+        /// Поле названия заметки
+        /// </summary>
+        private void NameBox_TextChanged(object sender, EventArgs e)
         {
             _noteData.Name = textBox1.Text;
-            //dateTimePicker2.Value = _noteData.TimeModified;
         }
 
         /// <summary>
         /// Выбор категории
         /// </summary>
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CategoryBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _noteData.Category = (NoteCategory)comboBox1.SelectedItem;
         }

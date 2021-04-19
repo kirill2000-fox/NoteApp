@@ -39,6 +39,8 @@ namespace NoteAppUI
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -48,16 +50,16 @@ namespace NoteAppUI
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(776, 24);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 81);
+            this.label1.Location = new System.Drawing.Point(13, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 17);
+            this.label1.Size = new System.Drawing.Size(35, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Введите текст заметки";
+            this.label1.Text = "Text";
             // 
             // button1
             // 
@@ -65,7 +67,7 @@ namespace NoteAppUI
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Exit";
+            this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonExit_Click);
             // 
@@ -81,12 +83,12 @@ namespace NoteAppUI
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(15, 101);
+            this.textBox4.Location = new System.Drawing.Point(9, 120);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(779, 317);
+            this.textBox4.Size = new System.Drawing.Size(779, 298);
             this.textBox4.TabIndex = 0;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label2
             // 
@@ -101,7 +103,7 @@ namespace NoteAppUI
             // 
             this.dateTimePicker1.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(301, 73);
+            this.dateTimePicker1.Location = new System.Drawing.Point(281, 92);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 7;
@@ -110,7 +112,7 @@ namespace NoteAppUI
             // 
             this.dateTimePicker2.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(567, 73);
+            this.dateTimePicker2.Location = new System.Drawing.Point(571, 92);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 8;
@@ -122,7 +124,7 @@ namespace NoteAppUI
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.CategoryBox_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -133,11 +135,31 @@ namespace NoteAppUI
             this.label3.TabIndex = 10;
             this.label3.Text = "Category:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(213, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Created:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(500, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 17);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Modified:";
+            // 
             // NoteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker2);
@@ -148,6 +170,9 @@ namespace NoteAppUI
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "NoteForm";
             this.Text = "Add/Edit Note";
             this.Load += new System.EventHandler(this.NoteForm_Load);
@@ -168,5 +193,7 @@ namespace NoteAppUI
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

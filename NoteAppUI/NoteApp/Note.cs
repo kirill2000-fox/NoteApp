@@ -105,7 +105,7 @@ namespace NoteApp
         }
 
         /// <summary>
-        /// Конструктор 1
+        /// Конструктор для создания экземпляра Note
         /// </summary>
         /// <param name="name"></param>
         /// <param name="noteCategory"></param>
@@ -116,15 +116,15 @@ namespace NoteApp
 
         }
 
-    /// <summary>
-    /// Конструктор 2
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="category"></param>
-    /// <param name="text"></param>
-    /// <param name="timeCreated"></param>
-    /// <param name="timeModified"></param>
-    [JsonConstructor]
+        /// <summary>
+        /// Конструктор, который вызывается при сериализации/десериализации
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="category"></param>
+        /// <param name="text"></param>
+        /// <param name="timeCreated"></param>
+        /// <param name="timeModified"></param>
+        [JsonConstructor]
     private Note(string name , NoteCategory category, string text, DateTime timeCreated, DateTime timeModified)
     {
         Name = name;
@@ -133,14 +133,5 @@ namespace NoteApp
         TimeCreated = timeCreated;
         TimeModified = timeModified;
     }
-        /// <summary>
-        /// Метод изменения времени последнего изменения заметки
-        /// </summary>
-        //private void ModifyTime()
-        //{
-        //    TimeModified = DateTime.Now;
-        //}
-
-
     }
 }
