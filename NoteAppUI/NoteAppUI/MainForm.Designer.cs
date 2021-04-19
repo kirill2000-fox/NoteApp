@@ -88,9 +88,9 @@ namespace NoteAppUI
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(6, 347);
+            this.button5.Location = new System.Drawing.Point(12, 351);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(47, 42);
+            this.button5.Size = new System.Drawing.Size(66, 56);
             this.button5.TabIndex = 11;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -101,9 +101,9 @@ namespace NoteAppUI
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(59, 347);
+            this.button6.Location = new System.Drawing.Point(84, 351);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(47, 42);
+            this.button6.Size = new System.Drawing.Size(71, 58);
             this.button6.TabIndex = 12;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.buttonEdit_Click);
@@ -114,9 +114,9 @@ namespace NoteAppUI
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(112, 347);
+            this.button7.Location = new System.Drawing.Point(161, 351);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(47, 42);
+            this.button7.Size = new System.Drawing.Size(64, 58);
             this.button7.TabIndex = 13;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.buttonRemove_Click);
@@ -144,7 +144,7 @@ namespace NoteAppUI
             this.textBox3.Location = new System.Drawing.Point(6, 103);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(512, 309);
+            this.textBox3.Size = new System.Drawing.Size(512, 311);
             this.textBox3.TabIndex = 17;
             // 
             // dateTimePicker2
@@ -192,7 +192,7 @@ namespace NoteAppUI
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 30);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 28);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -202,7 +202,7 @@ namespace NoteAppUI
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 420);
+            this.splitContainer1.Size = new System.Drawing.Size(800, 422);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 22;
             // 
@@ -219,7 +219,7 @@ namespace NoteAppUI
             this.panel1.Controls.Add(this.button5);
             this.panel1.Location = new System.Drawing.Point(0, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(263, 409);
+            this.panel1.Size = new System.Drawing.Size(263, 411);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -235,7 +235,7 @@ namespace NoteAppUI
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(530, 420);
+            this.panel2.Size = new System.Drawing.Size(530, 422);
             this.panel2.TabIndex = 0;
             // 
             // label6
@@ -275,20 +275,20 @@ namespace NoteAppUI
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // aboutToolStripMenuItem
@@ -296,7 +296,7 @@ namespace NoteAppUI
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
             // helpToolStripMenuItem

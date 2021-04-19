@@ -131,6 +131,7 @@ namespace NoteAppUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "About";
+            this.ShowIcon = false;
             this.Text = "About";
             this.ResumeLayout(false);
             this.PerformLayout();
