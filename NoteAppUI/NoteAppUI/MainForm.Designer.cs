@@ -44,9 +44,9 @@ namespace NoteAppUI
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.LableCategory = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LableName = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -224,10 +224,10 @@ namespace NoteAppUI
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.LableCategory);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.LableName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label3);
@@ -238,14 +238,14 @@ namespace NoteAppUI
             this.panel2.Size = new System.Drawing.Size(530, 422);
             this.panel2.TabIndex = 0;
             // 
-            // label6
+            // LableCategory
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(83, 50);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "label6";
+            this.LableCategory.AutoSize = true;
+            this.LableCategory.Location = new System.Drawing.Point(83, 50);
+            this.LableCategory.Name = "LableCategory";
+            this.LableCategory.Size = new System.Drawing.Size(100, 17);
+            this.LableCategory.TabIndex = 24;
+            this.LableCategory.Text = "LableCategory";
             // 
             // label5
             // 
@@ -256,15 +256,15 @@ namespace NoteAppUI
             this.label5.TabIndex = 23;
             this.label5.Text = "Category:";
             // 
-            // label4
+            // LableName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(3, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 29);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "label4";
+            this.LableName.AutoSize = true;
+            this.LableName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LableName.Location = new System.Drawing.Point(3, 9);
+            this.LableName.Name = "LableName";
+            this.LableName.Size = new System.Drawing.Size(147, 29);
+            this.LableName.TabIndex = 22;
+            this.LableName.Text = "LableName";
             // 
             // menuStrip1
             // 
@@ -350,13 +350,13 @@ namespace NoteAppUI
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LableName;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LableCategory;
         private System.Windows.Forms.Label label5;
     }
 }

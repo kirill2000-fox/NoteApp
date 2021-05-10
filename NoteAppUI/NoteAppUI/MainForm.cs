@@ -166,8 +166,8 @@ namespace NoteAppUI
             // получение заметки
             var selectedNote = (Note)NotelistBox.SelectedItem;
 
-            label4.Text = selectedNote.Name;
-            label6.Text = selectedNote.Category.ToString();
+            LableName.Text = selectedNote.Name;
+            LableCategory.Text = selectedNote.Category.ToString();
             dateTimePicker1.Value = selectedNote.TimeCreated;
             dateTimePicker2.Value = selectedNote.TimeModified;
         }
