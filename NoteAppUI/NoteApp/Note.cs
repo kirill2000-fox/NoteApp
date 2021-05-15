@@ -51,12 +51,8 @@ namespace NoteApp
                 }
                 else
                 {
-                    if (value != String.Empty)
-                    {
-                        _name = value;
-                        _timeModified = DateTime.Now;
-                    }
-                    
+                    _name = value;
+                    _timeModified = DateTime.Now;
                 }
             }
         }

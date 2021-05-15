@@ -7,32 +7,25 @@ namespace NoteApp.UnitTests
     public class NoteTest
     {
         private Note _note;
-        [SetUp]
-        public void InitNote()
-        {
-            // Исходные Данные для теста
-            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
-            _note.Name = "Имя заметки проверка";
-            _note.Category = NoteCategory.Job;
-            _note.Text = "Текст заметки проверка";
-            
-
-        }
-
+       
         /// <summary>
         /// Проверка ввода правильного названия заметки
         /// </summary>
         [Test(Description = "Позитивный тест Геттера Name")]
         public void Name_GoodName_ReturnsSameName()
         {
+            // Исходные Данные для теста
+            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
+
+            // Setup
             var expected = _note.Name;
             
+            // Act
             _note.Name = expected;
 
+            // Assert
             var actual = _note.Name;
-
-            //Сравниваем объекты равенства
-            Assert.AreEqual(expected, actual, "Геттер Title возвращает неправильное название заметки");
+            Assert.AreEqual(expected, actual, "Геттер Name возвращает неправильное название заметки");
         }
 
         /// <summary>
@@ -41,10 +34,16 @@ namespace NoteApp.UnitTests
         [Test(Description = "Тест Геттера Name с пустым значением")]
         public void TestNameGet_EmptyValue()
         {
-            var expected = "Без названия";
+            // Исходные Данные для теста
+            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
 
-            _note.Name = "";
+            // Setup
+            var expected = "";
 
+            // Act
+            _note.Name = expected;
+
+            // Assert
             var actual = _note.Name;
 
             Assert.AreEqual(expected, actual, "Геттер Name возвращает неверное название заметки при пустом значении");
@@ -57,10 +56,14 @@ namespace NoteApp.UnitTests
                             "поля, превышающего 50 символов")]
         public void TestNameGet_TooLongValue()
         {
+            // Исходные Данные для теста
+            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
+
+            // Setup
             var source = "Слишком длинное название поля," +
                          "превышающее 50 символов и выбрасывающее" +
                          "исключение";
-
+            // Act
             Assert.Throws<ArgumentException>(
                 
                 code: () =>
@@ -76,10 +79,16 @@ namespace NoteApp.UnitTests
         [Test(Description = "Тест Геттера Text")]
         public void TestTextGet_Value()
         {
+            // Исходные Данные для теста
+            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
+
+            // Setup
             var expected = _note.Text;
 
+            // Act
             _note.Text = expected;
 
+            // Assert
             var actual = _note.Text;
 
             Assert.AreEqual(expected, actual,
@@ -91,10 +100,16 @@ namespace NoteApp.UnitTests
         [Test(Description = "Тест Геттера TimeCreated")]
         public void TestIsCreated_ChangeValue()
         {
+            // Исходные Данные для теста
+            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
+
+            // Setup
             var expected = _note.TimeCreated;
 
+            // Act
             _note.Text = _note.Text;
 
+            // Assert
             var actual = _note.TimeCreated;
 
             Assert.AreEqual(expected, actual,
@@ -107,13 +122,19 @@ namespace NoteApp.UnitTests
         [Test(Description = "Тест геттера TimeModified")]
         public void TestIsChanged_ChangeValue()
         {
-            var firstValue = _note.TimeModified;
+            // Исходные Данные для теста
+            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
 
+            // Setup
+            var expected = _note.TimeModified;
+
+            // Act
             _note.Text = _note.Text;
 
-            var secondValue = _note.TimeModified;
+            // Assert
+            var actual = _note.TimeModified;
 
-            Assert.AreNotEqual(firstValue, secondValue,
+            Assert.AreNotEqual(expected, actual,
                 "Геттер TimeModified возвращает неправильное значение");
         }
 
