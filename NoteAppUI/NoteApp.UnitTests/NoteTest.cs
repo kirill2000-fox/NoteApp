@@ -91,29 +91,28 @@ namespace NoteApp.UnitTests
             // Assert
             var actual = _note.Text;
 
-            Assert.AreEqual(expected, actual,
+            Assert.AreEqual(expected, actual, 
                 "Геттер Text возвращает неправильное значение");
         }
+
+
         /// <summary>
         /// Проврека на то, что не изменяется дата изменения заметки
         /// </summary>
         [Test(Description = "Тест Геттера TimeCreated")]
         public void TestIsCreated_ChangeValue()
         {
-            // Исходные Данные для теста
-            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
-
             // Setup
-            var expected = _note.TimeCreated;
+            var expected = DateTime.Now;
 
             // Act
-            _note.Text = _note.Text;
+            var note = new Note(NoteCategory.Home, "Новая заметка", "Текст заметки");
 
             // Assert
-            var actual = _note.TimeCreated;
+            var actual = note.TimeCreated;
 
             Assert.AreEqual(expected, actual,
-                "Геттер TimeCreated возвращает неправильное значение");
+                "Геттер TimeCreated возвращает неправильное время создания");
         }
 
         /// <summary>
@@ -122,20 +121,17 @@ namespace NoteApp.UnitTests
         [Test(Description = "Тест геттера TimeModified")]
         public void TestIsChanged_ChangeValue()
         {
-            // Исходные Данные для теста
-            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
-
             // Setup
-            var expected = _note.TimeModified;
+            var expected =  DateTime.Now;
 
             // Act
-            _note.Text = _note.Text;
+            var note = new Note(NoteCategory.Home, "Новая заметка", "Текст заметки");
 
             // Assert
-            var actual = _note.TimeModified;
+            var actual = note.TimeModified;
 
-            Assert.AreNotEqual(expected, actual,
-                "Геттер TimeModified возвращает неправильное значение");
+            Assert.AreEqual(expected, actual,
+                "Геттер TimeModified возвращает неправильное время последнего изменения");
         }
 
     }
