@@ -8,7 +8,7 @@ namespace NoteApp
     /// <summary>
     /// Класс, хранящий название, текст, категории заметок, а также время создания и время изменений
     /// </summary>
-    public class Note
+    public class Note : ICloneable
     {
         /// <summary>
         /// Имя заметки.
@@ -71,12 +71,13 @@ namespace NoteApp
         /// <summary>
         /// Возвращает и задает категории пользователя.
         /// </summary>
-        public  NoteCategory Category
+        public NoteCategory Category
         {
             get => _noteCategory;
 
-            set 
-            { _noteCategory = value;
+            set
+            {
+                _noteCategory = value;
                 _timeModified = DateTime.Now;
             }
         }
@@ -84,7 +85,7 @@ namespace NoteApp
         /// <summary>
         /// Задает время создания заметки
         /// </summary>
-        public DateTime TimeCreated 
+        public DateTime TimeCreated
         {
             get => _timeCreated;
             private set => _timeCreated = value;
@@ -106,14 +107,14 @@ namespace NoteApp
         /// <param name="name"></param>
         /// <param name="noteCategory"></param>
         /// <param name="text"></param>
-        public Note(NoteCategory noteCategory, string name = "Без Названия", string text = "") :
+        public Note(string name, NoteCategory noteCategory, string text) :
             this(name, noteCategory, text, DateTime.Now, DateTime.Now)
         {
 
         }
 
         /// <summary>
-        /// Конструктор, который вызывается при сериализации/десериализации
+        /// Конструктор для создания экземпляра Note
         /// </summary>
         /// <param name="name"></param>
         /// <param name="category"></param>
@@ -121,13 +122,41 @@ namespace NoteApp
         /// <param name="timeCreated"></param>
         /// <param name="timeModified"></param>
         [JsonConstructor]
-    private Note(string name , NoteCategory category, string text, DateTime timeCreated, DateTime timeModified)
-    {
-        Name = name;
-        Category = category;
-        Text = text;
-        TimeCreated = timeCreated;
-        TimeModified = timeModified;
-    }
+        public Note(string name, NoteCategory category, string text, DateTime timeCreated, DateTime timeModified)
+        {
+            Name = name;
+            Category = category;
+            Text = text;
+            TimeCreated = timeCreated;
+            TimeModified = timeModified;
+        }
+
+        /// <summary>
+        /// Создание копии объекта
+        /// </summary>
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
+        /// <summary>
+        /// Сравнение двух заметок
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            var note = (Note)obj;
+
+            if (Name == note.Name && Category == note.Category && Text == note.Text &&
+                TimeCreated == note.TimeCreated && TimeModified == note.TimeModified)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

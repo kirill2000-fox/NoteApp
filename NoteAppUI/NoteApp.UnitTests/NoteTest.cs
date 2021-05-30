@@ -7,7 +7,7 @@ namespace NoteApp.UnitTests
     public class NoteTest
     {
         private Note _note;
-       
+
         /// <summary>
         /// Проверка ввода правильного названия заметки
         /// </summary>
@@ -15,11 +15,11 @@ namespace NoteApp.UnitTests
         public void Name_GoodName_ReturnsSameName()
         {
             // Исходные Данные для теста
-            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
+            _note = new Note("Имя заметки проверка", NoteCategory.Job, "Текст заметки проверка");
 
             // Setup
             var expected = _note.Name;
-            
+
             // Act
             _note.Name = expected;
 
@@ -35,7 +35,7 @@ namespace NoteApp.UnitTests
         public void TestNameGet_EmptyValue()
         {
             // Исходные Данные для теста
-            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
+            _note = new Note("Имя заметки проверка", NoteCategory.Job, "Текст заметки проверка");
 
             // Setup
             var expected = "";
@@ -57,7 +57,7 @@ namespace NoteApp.UnitTests
         public void TestNameGet_TooLongValue()
         {
             // Исходные Данные для теста
-            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
+            _note = new Note("Имя заметки проверка", NoteCategory.Job, "Текст заметки проверка");
 
             // Setup
             var source = "Слишком длинное название поля," +
@@ -65,7 +65,7 @@ namespace NoteApp.UnitTests
                          "исключение";
             // Act
             Assert.Throws<ArgumentException>(
-                
+
                 code: () =>
                 {
                     _note.Name = source;
@@ -80,7 +80,7 @@ namespace NoteApp.UnitTests
         public void TestTextGet_Value()
         {
             // Исходные Данные для теста
-            _note = new Note(NoteCategory.Job, "Имя заметки проверка", "Текст заметки проверка");
+            _note = new Note("Имя заметки проверка", NoteCategory.Job, "Текст заметки проверка");
 
             // Setup
             var expected = _note.Text;
@@ -91,7 +91,7 @@ namespace NoteApp.UnitTests
             // Assert
             var actual = _note.Text;
 
-            Assert.AreEqual(expected, actual, 
+            Assert.AreEqual(expected, actual,
                 "Геттер Text возвращает неправильное значение");
         }
 
@@ -106,7 +106,7 @@ namespace NoteApp.UnitTests
             var expected = DateTime.Now;
 
             // Act
-            var note = new Note(NoteCategory.Home, "Новая заметка", "Текст заметки");
+            var note = new Note("Имя заметки проверка", NoteCategory.Job, "Текст заметки проверка");
 
             // Assert
             var actual = note.TimeCreated;
@@ -122,10 +122,10 @@ namespace NoteApp.UnitTests
         public void TestIsChanged_ChangeValue()
         {
             // Setup
-            var expected =  DateTime.Now;
+            var expected = DateTime.Now;
 
             // Act
-            var note = new Note(NoteCategory.Home, "Новая заметка", "Текст заметки");
+            var note = new Note("Имя заметки проверка", NoteCategory.Job, "Текст заметки проверка");
 
             // Assert
             var actual = note.TimeModified;
