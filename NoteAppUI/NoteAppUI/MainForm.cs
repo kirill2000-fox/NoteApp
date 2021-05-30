@@ -9,7 +9,7 @@ namespace NoteAppUI
     public partial class MainForm : Form
     {
         private Project _project;
-        private Note _note = new Note(NoteCategory.Documents);
+        private Note _note = new Note("Имя заметки", NoteCategory.Job, "Текст заметки");
         private NoteForm F1 = new NoteForm();
         public MainForm()
         {

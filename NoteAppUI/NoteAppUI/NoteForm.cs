@@ -27,12 +27,12 @@ namespace NoteAppUI
         public NoteForm()
         {
             InitializeComponent();
-            comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
+            CategoryBox.DataSource = Enum.GetValues(typeof(NoteCategory));
         }
 
         private void NoteForm_Load(object sender, EventArgs e)
         {
-            comboBox1.SelectedItem = _noteData.Category;
+            CategoryBox.SelectedItem = _noteData.Category;
             textBox1.Text = _noteData.Name;
             textBox4.Text = _noteData.Text;
             dateTimePicker1.Value = NoteData.TimeCreated;
@@ -79,7 +79,7 @@ namespace NoteAppUI
         /// </summary>
         private void CategoryBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _noteData.Category = (NoteCategory)comboBox1.SelectedItem;
+            _noteData.Category = (NoteCategory)CategoryBox.SelectedItem;
         }
     }
 }
