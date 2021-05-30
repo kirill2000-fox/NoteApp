@@ -7,7 +7,7 @@ namespace NoteAppUI
 {
     public partial class NoteForm : Form
     {
-        private Note _noteData = new Note(NoteCategory.Documents);
+        private Note _noteData = new Note("Имя заметки", NoteCategory.Job, "Текст заметки");
 
         /// <summary>
         /// Возвращает и задает данные формы
