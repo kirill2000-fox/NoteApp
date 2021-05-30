@@ -33,10 +33,10 @@ namespace NoteAppUI
         private void NoteForm_Load(object sender, EventArgs e)
         {
             CategoryBox.SelectedItem = _noteData.Category;
-            textBox1.Text = _noteData.Name;
-            textBox4.Text = _noteData.Text;
-            dateTimePicker1.Value = NoteData.TimeCreated;
-            dateTimePicker2.Value = NoteData.TimeModified;
+            NameBox.Text = _noteData.Name;
+            TextBox.Text = _noteData.Text;
+            TimeCreatedPicker.Value = NoteData.TimeCreated;
+            TimeModifiedPicker.Value = NoteData.TimeModified;
 
         }
 
@@ -63,7 +63,7 @@ namespace NoteAppUI
         /// </summary>
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
-            _noteData.Text = textBox4.Text;
+            _noteData.Text = TextBox.Text;
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace NoteAppUI
         /// </summary>
         private void NameBox_TextChanged(object sender, EventArgs e)
         {
-            _noteData.Name = textBox1.Text;
+            _noteData.Name = NameBox.Text;
         }
 
         /// <summary>
@@ -80,6 +80,11 @@ namespace NoteAppUI
         private void CategoryBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _noteData.Category = (NoteCategory)CategoryBox.SelectedItem;
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
