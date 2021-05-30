@@ -106,7 +106,6 @@ namespace NoteAppUI
             this.TimeModifiedPicker.Name = "TimeModifiedPicker";
             this.TimeModifiedPicker.Size = new System.Drawing.Size(200, 22);
             this.TimeModifiedPicker.TabIndex = 8;
-            this.TimeModifiedPicker.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // CategoryBox
             // 

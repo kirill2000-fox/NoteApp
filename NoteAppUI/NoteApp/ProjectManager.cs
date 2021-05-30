@@ -12,7 +12,8 @@ namespace NoteApp
     /// </summary>
     public class ProjectManager
     {
-        public static readonly string FileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"/NoteApp/NoteApp.notes";
+        private const string FileName = "NoteApp.notes";
+        public static string DefaultPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\NoteApp\\" + FileName;
 
         public static void SaveToFile(Project project, string path)
         {
@@ -40,19 +41,21 @@ namespace NoteApp
             Project project ;
             if (File.Exists(path))
             {
-                var serializer = new JsonSerializer();
-                using (var reader = new StreamReader(path))
+                try
                 {
-                    using (var textReader = new JsonTextReader(reader))
+                    var serializer = new JsonSerializer();
+                    using (var reader = new StreamReader(path))
                     {
-                        project = serializer.Deserialize<Project>(textReader);
-
-                        if (project == null)
+                        using (var textReader = new JsonTextReader(reader))
                         {
-                            return new Project();
-                        }
+                            project = serializer.Deserialize<Project>(textReader);
 
+                        }
                     }
+                }
+                catch (JsonReaderException e)
+                {
+                    return new Project();
                 }
             }
             else
@@ -62,6 +65,6 @@ namespace NoteApp
 
             return project;
         }
-       
+
     }
 }

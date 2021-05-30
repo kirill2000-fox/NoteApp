@@ -54,6 +54,7 @@ namespace NoteAppUI
         /// </summary>
         private void buttonOK_Click(object sender, EventArgs e)
         {
+
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -72,6 +73,7 @@ namespace NoteAppUI
         private void NameBox_TextChanged(object sender, EventArgs e)
         {
             _noteData.Name = NameBox.Text;
+
         }
 
         /// <summary>
@@ -80,11 +82,6 @@ namespace NoteAppUI
         private void CategoryBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _noteData.Category = (NoteCategory)CategoryBox.SelectedItem;
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
