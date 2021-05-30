@@ -63,12 +63,14 @@ public class ProjectManagerTest
     }
 
     [Test(Description = "Позитивный тест метода сохранения данных в файл")]
+
+    // TODO: Исправить тест
     public void TestSaveToFile_CorrectValue()
     {
         // Setup
         var project = GetExampleProject();
         var location = Assembly.GetExecutingAssembly().Location;
-        var testDataLocation = Path.GetFullPath(location + "\\..\\TestData\\Test.txt");
+        var testDataLocation = Path.GetFullPath(location + /*"\\..\\TestData\\Test.txt"*/);
         var referenceDataLocation =
             Path.GetFullPath(location + "\\..\\TestData\\Reference.txt");
 
@@ -91,6 +93,7 @@ public class ProjectManagerTest
             "Метод SaveToFile сохраняет данные неверно");
     }
 
+    // TODO: Исправить тест
     [Test(Description = "Позитивный тест метода загрузки данных из файла")]
     public void TestLoadFromFile_CorrectValue()
     {
@@ -98,7 +101,7 @@ public class ProjectManagerTest
         var expectedProject = GetExampleProject();
         var location = Assembly.GetExecutingAssembly().Location;
         var referenceDataLocation =
-            Path.GetFullPath(location + "\\..\\TestData\\Reference.txt");
+            Path.GetFullPath(location + "/*/*\\..\\TestData\\Reference.txt*/*/");
 
         // Act
         var actualProject = ProjectManager.LoadFromFile(referenceDataLocation);
