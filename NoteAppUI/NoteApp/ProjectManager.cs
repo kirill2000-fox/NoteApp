@@ -1,5 +1,4 @@
 ﻿
-
 using System;
 using System.IO;
 
@@ -13,7 +12,8 @@ namespace NoteApp
     public class ProjectManager
     {
         private const string FileName = "NoteApp.notes";
-        public static string DefaultPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\NoteApp\\" + FileName;
+
+        public static string DefaultPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"\\NoteApp\\"+FileName;
 
         public static void SaveToFile(Project project, string path)
         {
@@ -49,7 +49,6 @@ namespace NoteApp
                         using (var textReader = new JsonTextReader(reader))
                         {
                             project = serializer.Deserialize<Project>(textReader);
-
                         }
                     }
                 }
@@ -65,6 +64,6 @@ namespace NoteApp
 
             return project;
         }
-
+       
     }
 }

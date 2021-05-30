@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using NoteApp;
 using NUnit.Framework;
 
 
@@ -146,5 +147,4 @@ public class ProjectManagerTest
             "Метод LoadFromFile не создает новый объект Project " +
             "при поврежденном файле");
     }
-}
 }
