@@ -17,8 +17,8 @@ namespace NoteAppUI
             InitializeComponent();
 
             comboBox1.DataSource = Enum.GetValues(typeof(NoteCategory));
-            _project = ProjectManager.LoadFromFile(ProjectManager.FileName);
-            
+            _project = ProjectManager.LoadFromFile(ProjectManager.DefaultPath);
+
             UpdateNotesListBox();
             NotelistBox.DisplayMember = "name";
             
@@ -62,7 +62,8 @@ namespace NoteAppUI
             }
             else return;
 
-            ProjectManager.SaveToFile(_project, ProjectManager.FileName);
+
+            ProjectManager.SaveToFile(_project, ProjectManager.DefaultPath);
         }
 
         /// <summary>
@@ -95,7 +96,7 @@ namespace NoteAppUI
                     NotelistBox.Items.Insert(selectedIndex, editedNote.Name);
                     UpdateNotesListBox();
                     NotelistBox.SetSelected(selectedIndex, true);
-                    ProjectManager.SaveToFile(_project, ProjectManager.FileName);
+                    ProjectManager.SaveToFile(_project, ProjectManager.DefaultPath);
                 }
                 else return;
             }
@@ -126,7 +127,7 @@ namespace NoteAppUI
             }
 
 
-            ProjectManager.SaveToFile(_project, ProjectManager.FileName);
+            ProjectManager.SaveToFile(_project, ProjectManager.DefaultPath);
         }
 
         public MainForm(string text) // <-- Новый конструктор формы
