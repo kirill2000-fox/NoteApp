@@ -230,7 +230,10 @@ namespace NoteAppUI
             ToolTip deleteTip = new ToolTip();
             deleteTip.SetToolTip(button7, "Удалить заметку");
         }
-        
+
+        /// <summary>
+        /// Выбор заметки исходя из категории и названия
+        /// </summary>
         private void NotesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // получение заметки
