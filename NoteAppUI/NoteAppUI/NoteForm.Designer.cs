@@ -31,7 +31,7 @@ namespace NoteAppUI
         {
             this.NameBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonOK = new System.Windows.Forms.Button();
             this.TextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TimeCreatedPicker = new System.Windows.Forms.DateTimePicker();
@@ -44,110 +44,123 @@ namespace NoteAppUI
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(15, 29);
+            this.NameBox.Location = new System.Drawing.Point(11, 24);
+            this.NameBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(776, 24);
+            this.NameBox.Size = new System.Drawing.Size(583, 20);
             this.NameBox.TabIndex = 0;
             this.NameBox.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(716, 422);
+            this.button1.Location = new System.Drawing.Point(537, 343);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 24);
+            this.button1.Size = new System.Drawing.Size(57, 20);
             this.button1.TabIndex = 2;
             this.button1.Text = "Canсel";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // button2
+            // buttonOK
             // 
-            this.button2.Location = new System.Drawing.Point(634, 422);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 25);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "OK";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.buttonOK_Click);
+            this.buttonOK.Location = new System.Drawing.Point(476, 343);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(57, 20);
+            this.buttonOK.TabIndex = 5;
+            this.buttonOK.Text = "OK";
+            this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // TextBox
             // 
-            this.TextBox.Location = new System.Drawing.Point(9, 120);
+            this.TextBox.Location = new System.Drawing.Point(7, 98);
+            this.TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.TextBox.Multiline = true;
             this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(782, 298);
+            this.TextBox.Size = new System.Drawing.Size(588, 243);
             this.TextBox.TabIndex = 0;
             this.TextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 6);
+            this.label2.Location = new System.Drawing.Point(10, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 17);
+            this.label2.Size = new System.Drawing.Size(103, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Название заметки";
             // 
             // TimeCreatedPicker
             // 
             this.TimeCreatedPicker.CustomFormat = "dd.MM.yyyyy HH:mm";
+            this.TimeCreatedPicker.Enabled = false;
             this.TimeCreatedPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimeCreatedPicker.Location = new System.Drawing.Point(297, 92);
+            this.TimeCreatedPicker.Location = new System.Drawing.Point(223, 75);
+            this.TimeCreatedPicker.Margin = new System.Windows.Forms.Padding(2);
             this.TimeCreatedPicker.Name = "TimeCreatedPicker";
-            this.TimeCreatedPicker.Size = new System.Drawing.Size(200, 22);
+            this.TimeCreatedPicker.Size = new System.Drawing.Size(151, 20);
             this.TimeCreatedPicker.TabIndex = 7;
             // 
-            // dateTimePicker2
+            // TimeModifiedPicker
             // 
             this.TimeModifiedPicker.CustomFormat = "dd.MM.yyyyy HH:mm";
+            this.TimeModifiedPicker.Enabled = false;
             this.TimeModifiedPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimeModifiedPicker.Location = new System.Drawing.Point(591, 92);
+            this.TimeModifiedPicker.Location = new System.Drawing.Point(443, 75);
+            this.TimeModifiedPicker.Margin = new System.Windows.Forms.Padding(2);
             this.TimeModifiedPicker.Name = "TimeModifiedPicker";
-            this.TimeModifiedPicker.Size = new System.Drawing.Size(200, 22);
+            this.TimeModifiedPicker.Size = new System.Drawing.Size(151, 20);
             this.TimeModifiedPicker.TabIndex = 8;
             // 
             // CategoryBox
             // 
             this.CategoryBox.FormattingEnabled = true;
-            this.CategoryBox.Location = new System.Drawing.Point(88, 72);
+            this.CategoryBox.Location = new System.Drawing.Point(66, 58);
+            this.CategoryBox.Margin = new System.Windows.Forms.Padding(2);
             this.CategoryBox.Name = "CategoryBox";
-            this.CategoryBox.Size = new System.Drawing.Size(121, 24);
+            this.CategoryBox.Size = new System.Drawing.Size(92, 21);
             this.CategoryBox.TabIndex = 9;
             this.CategoryBox.SelectedIndexChanged += new System.EventHandler(this.CategoryBox_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 75);
+            this.label3.Location = new System.Drawing.Point(10, 61);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Category:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(229, 97);
+            this.label4.Location = new System.Drawing.Point(172, 79);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Created:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(520, 97);
+            this.label5.Location = new System.Drawing.Point(390, 79);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 17);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Modified:";
             // 
             // NoteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(602, 372);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -156,12 +169,13 @@ namespace NoteAppUI
             this.Controls.Add(this.TimeCreatedPicker);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TextBox);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NameBox);
-            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(618, 411);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(818, 497);
+            this.MinimumSize = new System.Drawing.Size(618, 411);
             this.Name = "NoteForm";
             this.ShowIcon = false;
             this.Text = "Add/Edit Note";
@@ -175,7 +189,7 @@ namespace NoteAppUI
 
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.TextBox TextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker TimeCreatedPicker;

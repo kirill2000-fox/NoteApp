@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 
@@ -14,6 +13,7 @@ namespace NoteApp
         /// Выбранная заметка
         /// </summary>
         public Note SelectedNote { get; set; }
+
         /// <summary>
         ///Класс Project, хранящий коллекцию заметок Note
         /// </summary>
@@ -30,7 +30,7 @@ namespace NoteApp
             return orderedList.ToList();
         }
 
-        // <summary>
+        /// <summary>
         /// Сортировка списка заметок по дате изменения (по убыванию)
         /// при определенной категории
         /// </summary>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using NoteApp;
 
@@ -8,6 +9,7 @@ namespace NoteAppUI
     public partial class NoteForm : Form
     {
         private Note _noteData = new Note("Имя заметки", NoteCategory.Job, "Текст заметки");
+        private bool _isCorrectData = true;
 
         /// <summary>
         /// Возвращает и задает данные формы
@@ -27,7 +29,13 @@ namespace NoteAppUI
         public NoteForm()
         {
             InitializeComponent();
-            CategoryBox.DataSource = Enum.GetValues(typeof(NoteCategory));
+            foreach (NoteCategory category in Enum.GetValues(typeof(NoteCategory)))
+            {
+                if (category != NoteCategory.All)
+                {
+                    CategoryBox.Items.Add(category);
+                }
+            }
         }
 
         private void NoteForm_Load(object sender, EventArgs e)
@@ -54,6 +62,11 @@ namespace NoteAppUI
         /// </summary>
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            if (!_isCorrectData)
+            {
+                MessageBox.Show("Данные введены неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -72,8 +85,18 @@ namespace NoteAppUI
         /// </summary>
         private void NameBox_TextChanged(object sender, EventArgs e)
         {
-            _noteData.Name = NameBox.Text;
-
+            try
+            {
+                _noteData.Name = NameBox.Text;
+                NameBox.BackColor = Color.White;
+                _isCorrectData = true;
+                TimeModifiedPicker.Text = _noteData.TimeModified.ToShortDateString();
+            }
+            catch (ArgumentException exception)
+            {
+                NameBox.BackColor = Color.Red;
+                _isCorrectData = false;
+            }
         }
 
         /// <summary>

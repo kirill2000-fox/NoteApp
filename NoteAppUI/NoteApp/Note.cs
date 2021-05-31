@@ -71,13 +71,12 @@ namespace NoteApp
         /// <summary>
         /// Возвращает и задает категории пользователя.
         /// </summary>
-        public NoteCategory Category
+        public  NoteCategory Category
         {
             get => _noteCategory;
 
-            set
-            {
-                _noteCategory = value;
+            set 
+            { _noteCategory = value;
                 _timeModified = DateTime.Now;
             }
         }
@@ -85,7 +84,7 @@ namespace NoteApp
         /// <summary>
         /// Задает время создания заметки
         /// </summary>
-        public DateTime TimeCreated
+        public DateTime TimeCreated 
         {
             get => _timeCreated;
             private set => _timeCreated = value;
@@ -122,7 +121,7 @@ namespace NoteApp
         /// <param name="timeCreated"></param>
         /// <param name="timeModified"></param>
         [JsonConstructor]
-        public Note(string name, NoteCategory category, string text, DateTime timeCreated, DateTime timeModified)
+        public Note(string name , NoteCategory category, string text, DateTime timeCreated, DateTime timeModified)
         {
             Name = name;
             Category = category;
