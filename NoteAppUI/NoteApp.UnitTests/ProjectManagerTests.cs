@@ -69,11 +69,11 @@ public class ProjectManagerTest
         // Setup
         var project = GetExampleProject();
         var location = Assembly.GetExecutingAssembly().Location;
-        var testDataLocation = Path.GetFullPath(location + "\\..\\TestData\\Test.txt");
+        var testDataLocation = Path.GetFullPath(Path.GetDirectoryName(location) + "\\TestData\\Test.txt");
         var referenceDataLocation =
             Path.GetFullPath(location + "\\..\\TestData\\Reference.txt");
 
-        if (File.Exists(testDataLocation))
+        if (File.Exists(testDataLocation))  
         {
             File.Delete(testDataLocation);
         }
@@ -116,14 +116,13 @@ public class ProjectManagerTest
         // Setup
         var expectedProject = new Project();
         var location = Assembly.GetExecutingAssembly().Location;
-        var testDataLocation = Path.GetFullPath(location + "\\..\\TestData\\Test.txt");
+        var testDataLocation = Path.GetFullPath(Path.GetDirectoryName(location) + "\\TestData\\Test.txt");
 
         if (File.Exists(testDataLocation))
         {
             File.Delete(testDataLocation);
         }
-
-
+        
         // Act
         var actualProject = ProjectManager.LoadFromFile(testDataLocation);
 
@@ -139,7 +138,7 @@ public class ProjectManagerTest
         var expectedProject = new Project();
         var location = Assembly.GetExecutingAssembly().Location;
         var corruptedDataLocation =
-            Path.GetFullPath(location + "\\..\\TestData\\Destroyed.txt");
+            Path.GetFullPath(location + "\\..\\TestData\\Corrupted.txt");
 
         // Act
         var actualProject = ProjectManager.LoadFromFile(corruptedDataLocation);
