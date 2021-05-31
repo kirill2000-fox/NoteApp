@@ -85,9 +85,9 @@ namespace NoteApp.UnitTests
         }
 
         /// <summary>
-        /// Пример списка заметок из 4 элементов
+        /// Создание списка заметок из 4 элементов
         /// </summary>
-        /// <returns></returns>
+        
         private List<Note> GetExampleListWithDate()
         {
             return new List<Note>()

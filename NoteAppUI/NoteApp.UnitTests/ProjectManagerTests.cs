@@ -139,7 +139,7 @@ public class ProjectManagerTest
         var expectedProject = new Project();
         var location = Assembly.GetExecutingAssembly().Location;
         var corruptedDataLocation =
-            Path.GetFullPath(location + "\\..\\TestData\\Corrupted.txt");
+            Path.GetFullPath(location + "\\..\\TestData\\Destroyed.txt");
 
         // Act
         var actualProject = ProjectManager.LoadFromFile(corruptedDataLocation);
