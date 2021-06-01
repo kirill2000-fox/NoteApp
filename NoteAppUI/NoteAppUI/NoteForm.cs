@@ -92,7 +92,7 @@ namespace NoteAppUI
                 _isCorrectData = true;
                 TimeModifiedPicker.Text = _noteData.TimeModified.ToShortDateString();
             }
-            catch (ArgumentException exception)
+            catch (ArgumentException)
             {
                 NameBox.BackColor = Color.Red;
                 _isCorrectData = false;
