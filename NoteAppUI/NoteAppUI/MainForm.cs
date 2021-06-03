@@ -312,6 +312,5 @@ namespace NoteAppUI
             ProjectManager.SaveToFile(_project, ProjectManager.DefaultPath);
             Close();
         }
-
     }
 }

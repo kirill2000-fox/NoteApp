@@ -70,17 +70,17 @@ namespace NoteAppUI
             this.CategoryComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CategoryComboBox.FormattingEnabled = true;
-            this.CategoryComboBox.Location = new System.Drawing.Point(149, 22);
+            this.CategoryComboBox.Location = new System.Drawing.Point(119, 2);
             this.CategoryComboBox.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.CategoryComboBox.Name = "CategoryComboBox";
-            this.CategoryComboBox.Size = new System.Drawing.Size(195, 24);
+            this.CategoryComboBox.Size = new System.Drawing.Size(236, 24);
             this.CategoryComboBox.TabIndex = 4;
             this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 27);
+            this.label1.Location = new System.Drawing.Point(4, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 17);
@@ -94,10 +94,10 @@ namespace NoteAppUI
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(16, 439);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Location = new System.Drawing.Point(8, 463);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 69);
+            this.button5.Size = new System.Drawing.Size(50, 50);
             this.button5.TabIndex = 11;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -108,10 +108,10 @@ namespace NoteAppUI
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(112, 439);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Location = new System.Drawing.Point(57, 463);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(95, 71);
+            this.button6.Size = new System.Drawing.Size(50, 50);
             this.button6.TabIndex = 12;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.buttonEdit_Click);
@@ -122,10 +122,10 @@ namespace NoteAppUI
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(215, 439);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Location = new System.Drawing.Point(106, 463);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(85, 71);
+            this.button7.Size = new System.Drawing.Size(50, 50);
             this.button7.TabIndex = 13;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.buttonRemove_Click);
@@ -137,10 +137,10 @@ namespace NoteAppUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NotesListBox.FormattingEnabled = true;
             this.NotesListBox.ItemHeight = 16;
-            this.NotesListBox.Location = new System.Drawing.Point(8, 58);
-            this.NotesListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NotesListBox.Location = new System.Drawing.Point(8, 26);
+            this.NotesListBox.Margin = new System.Windows.Forms.Padding(4);
             this.NotesListBox.Name = "NotesListBox";
-            this.NotesListBox.Size = new System.Drawing.Size(336, 356);
+            this.NotesListBox.Size = new System.Drawing.Size(349, 420);
             this.NotesListBox.TabIndex = 14;
             this.NotesListBox.SelectedIndexChanged += new System.EventHandler(this.NotesListBox_SelectedIndexChanged);
             // 
@@ -150,10 +150,10 @@ namespace NoteAppUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ContentTextBox.Location = new System.Drawing.Point(8, 127);
-            this.ContentTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ContentTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ContentTextBox.Multiline = true;
             this.ContentTextBox.Name = "ContentTextBox";
-            this.ContentTextBox.Size = new System.Drawing.Size(682, 389);
+            this.ContentTextBox.Size = new System.Drawing.Size(676, 395);
             this.ContentTextBox.TabIndex = 17;
             // 
             // TimeModifiedPicker
@@ -161,10 +161,10 @@ namespace NoteAppUI
             this.TimeModifiedPicker.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.TimeModifiedPicker.Enabled = false;
             this.TimeModifiedPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimeModifiedPicker.Location = new System.Drawing.Point(420, 92);
-            this.TimeModifiedPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimeModifiedPicker.Location = new System.Drawing.Point(290, 96);
+            this.TimeModifiedPicker.Margin = new System.Windows.Forms.Padding(4);
             this.TimeModifiedPicker.Name = "TimeModifiedPicker";
-            this.TimeModifiedPicker.Size = new System.Drawing.Size(188, 22);
+            this.TimeModifiedPicker.Size = new System.Drawing.Size(125, 22);
             this.TimeModifiedPicker.TabIndex = 19;
             // 
             // TimeCreatedPicker
@@ -172,10 +172,10 @@ namespace NoteAppUI
             this.TimeCreatedPicker.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.TimeCreatedPicker.Enabled = false;
             this.TimeCreatedPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimeCreatedPicker.Location = new System.Drawing.Point(96, 92);
-            this.TimeCreatedPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimeCreatedPicker.Location = new System.Drawing.Point(81, 96);
+            this.TimeCreatedPicker.Margin = new System.Windows.Forms.Padding(4);
             this.TimeCreatedPicker.Name = "TimeCreatedPicker";
-            this.TimeCreatedPicker.Size = new System.Drawing.Size(189, 22);
+            this.TimeCreatedPicker.Size = new System.Drawing.Size(125, 22);
             this.TimeCreatedPicker.TabIndex = 18;
             // 
             // label3
@@ -195,7 +195,7 @@ namespace NoteAppUI
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(331, 98);
+            this.label2.Location = new System.Drawing.Point(217, 101);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 17);
@@ -206,7 +206,7 @@ namespace NoteAppUI
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 28);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -217,7 +217,7 @@ namespace NoteAppUI
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Size = new System.Drawing.Size(1067, 526);
-            this.splitContainer1.SplitterDistance = 354;
+            this.splitContainer1.SplitterDistance = 360;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 22;
             // 
@@ -232,10 +232,10 @@ namespace NoteAppUI
             this.panel1.Controls.Add(this.CategoryComboBox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Location = new System.Drawing.Point(0, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 513);
+            this.panel1.Size = new System.Drawing.Size(361, 517);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -250,15 +250,15 @@ namespace NoteAppUI
             this.panel2.Controls.Add(this.TimeModifiedPicker);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(708, 526);
+            this.panel2.Size = new System.Drawing.Size(702, 526);
             this.panel2.TabIndex = 0;
             // 
             // LableCategory
             // 
             this.LableCategory.AutoSize = true;
-            this.LableCategory.Location = new System.Drawing.Point(111, 62);
+            this.LableCategory.Location = new System.Drawing.Point(154, 62);
             this.LableCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LableCategory.Name = "LableCategory";
             this.LableCategory.Size = new System.Drawing.Size(0, 17);
