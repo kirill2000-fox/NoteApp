@@ -152,7 +152,7 @@ namespace NoteAppUI
             this.ContentTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ContentTextBox.Multiline = true;
             this.ContentTextBox.Name = "ContentTextBox";
-            this.ContentTextBox.Size = new System.Drawing.Size(681, 397);
+            this.ContentTextBox.Size = new System.Drawing.Size(681, 393);
             this.ContentTextBox.TabIndex = 17;
             // 
             // TimeModifiedPicker
@@ -204,7 +204,7 @@ namespace NoteAppUI
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 28);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 30);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -215,7 +215,7 @@ namespace NoteAppUI
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
-            this.splitContainer1.Size = new System.Drawing.Size(1067, 526);
+            this.splitContainer1.Size = new System.Drawing.Size(1067, 524);
             this.splitContainer1.SplitterDistance = 360;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 22;
@@ -234,7 +234,7 @@ namespace NoteAppUI
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 517);
+            this.panel1.Size = new System.Drawing.Size(361, 515);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -251,7 +251,7 @@ namespace NoteAppUI
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(702, 526);
+            this.panel2.Size = new System.Drawing.Size(702, 524);
             this.panel2.TabIndex = 0;
             // 
             // LableName
@@ -282,7 +282,7 @@ namespace NoteAppUI
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 30);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -353,7 +353,7 @@ namespace NoteAppUI
             // LableCategory
             // 
             this.LableCategory.BackColor = System.Drawing.SystemColors.Menu;
-            this.LableCategory.Location = new System.Drawing.Point(75, 68);
+            this.LableCategory.Location = new System.Drawing.Point(75, 70);
             this.LableCategory.Name = "LableCategory";
             this.LableCategory.Size = new System.Drawing.Size(105, 22);
             this.LableCategory.TabIndex = 26;
