@@ -35,7 +35,6 @@ namespace NoteAppUI
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.NotesListBox = new System.Windows.Forms.ListBox();
             this.ContentTextBox = new System.Windows.Forms.TextBox();
             this.TimeModifiedPicker = new System.Windows.Forms.DateTimePicker();
             this.TimeCreatedPicker = new System.Windows.Forms.DateTimePicker();
@@ -56,6 +55,7 @@ namespace NoteAppUI
             this.removeNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NotesListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -129,19 +129,6 @@ namespace NoteAppUI
             this.button7.TabIndex = 13;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.buttonRemove_Click);
-            // 
-            // NotesListBox
-            // 
-            this.NotesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NotesListBox.FormattingEnabled = true;
-            this.NotesListBox.ItemHeight = 16;
-            this.NotesListBox.Location = new System.Drawing.Point(7, 31);
-            this.NotesListBox.Name = "NotesListBox";
-            this.NotesListBox.Size = new System.Drawing.Size(349, 420);
-            this.NotesListBox.TabIndex = 14;
-            this.NotesListBox.SelectedIndexChanged += new System.EventHandler(this.NotesListBox_SelectedIndexChanged);
             // 
             // ContentTextBox
             // 
@@ -361,6 +348,21 @@ namespace NoteAppUI
             this.helpToolStripMenuItem.Text = "About";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
+            // NotesListBox
+            // 
+            this.NotesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NotesListBox.FormattingEnabled = true;
+            this.NotesListBox.HorizontalScrollbar = true;
+            this.NotesListBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NotesListBox.ItemHeight = 16;
+            this.NotesListBox.Location = new System.Drawing.Point(7, 31);
+            this.NotesListBox.Name = "NotesListBox";
+            this.NotesListBox.Size = new System.Drawing.Size(349, 420);
+            this.NotesListBox.TabIndex = 14;
+            this.NotesListBox.SelectedIndexChanged += new System.EventHandler(this.NotesListBox_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -397,7 +399,6 @@ namespace NoteAppUI
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ListBox NotesListBox;
         private System.Windows.Forms.TextBox ContentTextBox;
         private System.Windows.Forms.DateTimePicker TimeModifiedPicker;
         private System.Windows.Forms.DateTimePicker TimeCreatedPicker;
@@ -418,6 +419,7 @@ namespace NoteAppUI
         private System.Windows.Forms.ToolStripMenuItem removeNoteToolStripMenuItem;
         private System.Windows.Forms.TextBox LableName;
         private System.Windows.Forms.TextBox LableCategory;
+        private System.Windows.Forms.ListBox NotesListBox;
     }
 }
 

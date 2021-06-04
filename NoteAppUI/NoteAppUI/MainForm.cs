@@ -238,7 +238,7 @@ namespace NoteAppUI
         {
             // получение заметки
             var selectedIndex = NotesListBox.SelectedIndex;
-            if (selectedIndex > _visibleNotes.Count)
+            if (selectedIndex < 0)
             {
                 return;
             }
