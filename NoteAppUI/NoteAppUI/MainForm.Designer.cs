@@ -44,6 +44,7 @@ namespace NoteAppUI
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LableCategory = new System.Windows.Forms.TextBox();
             this.LableName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -55,7 +56,6 @@ namespace NoteAppUI
             this.removeNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LableCategory = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -94,7 +94,7 @@ namespace NoteAppUI
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(8, 465);
+            this.button5.Location = new System.Drawing.Point(8, 467);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 50);
@@ -108,7 +108,7 @@ namespace NoteAppUI
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(57, 465);
+            this.button6.Location = new System.Drawing.Point(57, 467);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
@@ -122,7 +122,7 @@ namespace NoteAppUI
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(106, 465);
+            this.button7.Location = new System.Drawing.Point(106, 467);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 50);
@@ -152,7 +152,7 @@ namespace NoteAppUI
             this.ContentTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ContentTextBox.Multiline = true;
             this.ContentTextBox.Name = "ContentTextBox";
-            this.ContentTextBox.Size = new System.Drawing.Size(681, 393);
+            this.ContentTextBox.Size = new System.Drawing.Size(681, 395);
             this.ContentTextBox.TabIndex = 17;
             // 
             // TimeModifiedPicker
@@ -254,13 +254,24 @@ namespace NoteAppUI
             this.panel2.Size = new System.Drawing.Size(702, 524);
             this.panel2.TabIndex = 0;
             // 
+            // LableCategory
+            // 
+            this.LableCategory.BackColor = System.Drawing.SystemColors.Menu;
+            this.LableCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LableCategory.Location = new System.Drawing.Point(75, 70);
+            this.LableCategory.Name = "LableCategory";
+            this.LableCategory.Size = new System.Drawing.Size(105, 15);
+            this.LableCategory.TabIndex = 26;
+            // 
             // LableName
             // 
             this.LableName.BackColor = System.Drawing.SystemColors.Menu;
+            this.LableName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LableName.Enabled = false;
             this.LableName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LableName.Location = new System.Drawing.Point(8, 25);
             this.LableName.Name = "LableName";
-            this.LableName.Size = new System.Drawing.Size(681, 37);
+            this.LableName.Size = new System.Drawing.Size(681, 30);
             this.LableName.TabIndex = 25;
             // 
             // label5
@@ -291,7 +302,7 @@ namespace NoteAppUI
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -309,7 +320,7 @@ namespace NoteAppUI
             this.editNoteToolStripMenuItem,
             this.removeNoteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // addNoteToolStripMenuItem
@@ -339,7 +350,7 @@ namespace NoteAppUI
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
             // helpToolStripMenuItem
@@ -349,14 +360,6 @@ namespace NoteAppUI
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.helpToolStripMenuItem.Text = "About";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
-            // LableCategory
-            // 
-            this.LableCategory.BackColor = System.Drawing.SystemColors.Menu;
-            this.LableCategory.Location = new System.Drawing.Point(75, 70);
-            this.LableCategory.Name = "LableCategory";
-            this.LableCategory.Size = new System.Drawing.Size(105, 22);
-            this.LableCategory.TabIndex = 26;
             // 
             // MainForm
             // 

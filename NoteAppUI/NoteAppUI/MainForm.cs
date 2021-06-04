@@ -238,6 +238,10 @@ namespace NoteAppUI
         {
             // получение заметки
             var selectedIndex = NotesListBox.SelectedIndex;
+            if (selectedIndex > _visibleNotes.Count)
+            {
+                return;
+            }
             var selectedNote = _visibleNotes[selectedIndex];
             var realIndex = _project.Notes.IndexOf(selectedNote);
 
