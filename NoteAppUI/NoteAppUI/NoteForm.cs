@@ -8,7 +8,7 @@ namespace NoteAppUI
 {
     public partial class NoteForm : Form
     {
-        private Note _defaultData = new Note("Имя заметки", NoteCategory.Job, "Текст заметки");
+        private Note _defaultData = new Note("Note name", NoteCategory.Job, "Note text");
         private bool _isCorrectData = true;
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace NoteAppUI
         {
             if (!_isCorrectData)
             {
-                MessageBox.Show("Данные введены неверно", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Data entered incorrectly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

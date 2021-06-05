@@ -16,6 +16,9 @@ namespace NoteApp
 
         public static string DefaultPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"\\NoteApp\\"+FileName;
 
+        /// <summary>
+        /// Метод сохранения файла
+        /// </summary>
         public static void SaveToFile(Project project, string path)
         {
             JsonSerializer serializer = new JsonSerializer();
