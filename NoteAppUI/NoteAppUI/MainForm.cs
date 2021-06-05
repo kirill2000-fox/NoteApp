@@ -109,7 +109,7 @@ namespace NoteAppUI
 
             if (addForm.DialogResult == DialogResult.OK)
             {
-                var addedNote = addForm.NoteData;
+                var addedNote = addForm.DefaultData;
                 _project.Notes.Add(addedNote);
                 UpdateNotesListBoxAfterChange(addedNote);
             }
@@ -139,19 +139,18 @@ namespace NoteAppUI
                 var selectedNote = _project.Notes[realIndex];
 
                 var editForm = new NoteForm();
-                editForm.NoteData = selectedNote.Clone() as Note;
+                editForm.DefaultData = selectedNote.Clone() as Note;
                 editForm.ShowDialog();
 
                 if (editForm.DialogResult == DialogResult.OK)
                 {
-                    var editedNote = editForm.NoteData;
+                    var editedNote = editForm.DefaultData;
 
                     _project.Notes.RemoveAt(realIndex);
                     _project.Notes.Insert(realIndex, editedNote);
                     UpdateNotesListBoxAfterChange(editedNote);
                     ProjectManager.SaveToFile(_project, ProjectManager.DefaultPath);
                 }
-                else return;
             }
             catch
             {

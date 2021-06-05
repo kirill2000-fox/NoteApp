@@ -8,21 +8,21 @@ namespace NoteAppUI
 {
     public partial class NoteForm : Form
     {
-        private Note _noteData = new Note("Имя заметки", NoteCategory.Job, "Текст заметки");
+        private Note _defaultData = new Note("Имя заметки", NoteCategory.Job, "Текст заметки");
         private bool _isCorrectData = true;
 
         /// <summary>
         /// Возвращает и задает данные формы
         /// </summary>
-        public Note NoteData
+        public Note DefaultData
         {
             get
             {
-                return _noteData;
+                return _defaultData;
             }
             set
             {
-                _noteData = value;
+                _defaultData = value;
             }
         }
 
@@ -40,11 +40,11 @@ namespace NoteAppUI
 
         private void NoteForm_Load(object sender, EventArgs e)
         {
-            CategoryBox.SelectedItem = _noteData.Category;
-            NameBox.Text = _noteData.Name;
-            TextBox.Text = _noteData.Text;
-            TimeCreatedPicker.Value = NoteData.TimeCreated;
-            TimeModifiedPicker.Value = NoteData.TimeModified;
+            CategoryBox.SelectedItem = _defaultData.Category;
+            NameBox.Text = _defaultData.Name;
+            TextBox.Text = _defaultData.Text;
+            TimeCreatedPicker.Value = DefaultData.TimeCreated;
+            TimeModifiedPicker.Value = DefaultData.TimeModified;
 
         }
 
@@ -77,7 +77,7 @@ namespace NoteAppUI
         /// </summary>
         private void TextBox_TextChanged(object sender, EventArgs e)
         {
-            _noteData.Text = TextBox.Text;
+            _defaultData.Text = TextBox.Text;
         }
 
         /// <summary>
@@ -87,10 +87,10 @@ namespace NoteAppUI
         {
             try
             {
-                _noteData.Name = NameBox.Text;
+                _defaultData.Name = NameBox.Text;
                 NameBox.BackColor = Color.White;
                 _isCorrectData = true;
-                TimeModifiedPicker.Text = _noteData.TimeModified.ToShortDateString();
+                TimeModifiedPicker.Text = _defaultData.TimeModified.ToShortDateString();
             }
             catch (ArgumentException)
             {
@@ -104,7 +104,7 @@ namespace NoteAppUI
         /// </summary>
         private void CategoryBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _noteData.Category = (NoteCategory)CategoryBox.SelectedItem;
+            _defaultData.Category = (NoteCategory)CategoryBox.SelectedItem;
         }
     }
 }
