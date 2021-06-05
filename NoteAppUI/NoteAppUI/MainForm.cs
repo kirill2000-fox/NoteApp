@@ -20,8 +20,11 @@ namespace NoteAppUI
             _project = ProjectManager.LoadFromFile(ProjectManager.DefaultPath);
             _visibleNotes = _project.TimeModifiedSort();
             _project.Notes = _visibleNotes;
-            CategoryComboBox.DataSource = Enum.GetValues(typeof(NoteCategory));
-            CategoryComboBox.SelectedItem = NoteCategory.All;
+            foreach (var category in Enum.GetValues(typeof(NoteCategory)))
+            {
+                CategoryComboBox.Items.Add(category);
+            }
+            CategoryComboBox.Items.Add("All");
 
             UpdateNotesListBox();
             if (_project.SelectedNote != null)
@@ -50,7 +53,7 @@ namespace NoteAppUI
         /// </summary>
         private void UpdateNotesListBoxAfterChange(Note note)
         {
-            if ((NoteCategory)CategoryComboBox.SelectedItem != NoteCategory.All)
+            if (CategoryComboBox.SelectedItem != null && CategoryComboBox.SelectedItem != "All")
             {
                 _visibleNotes = _project.TimeModifiedSortWithCategory((NoteCategory)CategoryComboBox.SelectedItem);
             }
@@ -61,7 +64,7 @@ namespace NoteAppUI
 
             UpdateNotesListBox();
 
-            if ((NoteCategory)CategoryComboBox.SelectedItem != NoteCategory.All)
+            if (CategoryComboBox.SelectedItem != null && CategoryComboBox.SelectedItem != "All")
             {
                 if (note.Category.Equals((NoteCategory)CategoryComboBox.SelectedItem))
                 {
@@ -182,7 +185,7 @@ namespace NoteAppUI
                 _project.Notes.RemoveAt(realIndex);
 
                 //ЗАЧЕМ ЗДЕСЬ  копирование???
-                if ((NoteCategory)CategoryComboBox.SelectedItem != NoteCategory.All)
+                if (CategoryComboBox.SelectedItem != null && CategoryComboBox.SelectedItem != "All")
                 {
                     _visibleNotes = _project.TimeModifiedSortWithCategory((NoteCategory)CategoryComboBox.SelectedItem);
                 }
@@ -288,7 +291,7 @@ namespace NoteAppUI
         //ДУБЛИРОВАНИЕ
         private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((NoteCategory)CategoryComboBox.SelectedItem != NoteCategory.All)
+            if (CategoryComboBox.SelectedItem != null && CategoryComboBox.SelectedItem != "All")
             {
                 _visibleNotes = _project.TimeModifiedSortWithCategory((NoteCategory)CategoryComboBox.SelectedIndex);
             }

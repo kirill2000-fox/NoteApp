@@ -31,10 +31,7 @@ namespace NoteAppUI
             InitializeComponent();
             foreach (NoteCategory category in Enum.GetValues(typeof(NoteCategory)))
             {
-                if (category != NoteCategory.All)
-                {
-                    CategoryBox.Items.Add(category);
-                }
+                CategoryBox.Items.Add(category);
             }
         }
 

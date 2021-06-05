@@ -15,6 +15,5 @@ namespace NoteApp
         Documents,
         Finance,
         Other,
-        All
     }
 }
