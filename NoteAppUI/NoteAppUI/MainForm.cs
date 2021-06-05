@@ -27,6 +27,7 @@ namespace NoteAppUI
         public MainForm()
         {
             InitializeComponent();
+
             //Загрузка заметок из файла
             _project = ProjectManager.LoadFromFile(ProjectManager.DefaultPath);
             _visibleNotes = _project.TimeModifiedSort();
