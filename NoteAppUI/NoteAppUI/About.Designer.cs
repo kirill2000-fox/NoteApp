@@ -121,7 +121,7 @@ namespace NoteAppUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(400, 448);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label5);
@@ -130,6 +130,9 @@ namespace NoteAppUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(418, 495);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(418, 495);
             this.Name = "About";
             this.ShowIcon = false;
             this.Text = "About";
