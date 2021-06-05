@@ -76,6 +76,9 @@ namespace NoteAppUI
             // 
             // TextBox
             // 
+            this.TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TextBox.Location = new System.Drawing.Point(9, 105);
             this.TextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBox.Multiline = true;
@@ -86,6 +89,8 @@ namespace NoteAppUI
             // 
             // labelName2
             // 
+            this.labelName2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelName2.AutoSize = true;
             this.labelName2.Location = new System.Drawing.Point(6, 9);
             this.labelName2.Name = "labelName2";
@@ -127,6 +132,8 @@ namespace NoteAppUI
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 41);
             this.label3.Name = "label3";
@@ -136,6 +143,8 @@ namespace NoteAppUI
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 71);
             this.label4.Margin = new System.Windows.Forms.Padding(3);
@@ -146,6 +155,8 @@ namespace NoteAppUI
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(228, 71);
             this.label5.Name = "label5";
@@ -170,9 +181,6 @@ namespace NoteAppUI
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NameBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(818, 495);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(818, 495);
             this.Name = "NoteForm";
             this.ShowIcon = false;
             this.Text = "Add/Edit Note";

@@ -94,7 +94,7 @@ namespace NoteAppUI
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(7, 460);
+            this.button5.Location = new System.Drawing.Point(7, 462);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 50);
@@ -108,7 +108,7 @@ namespace NoteAppUI
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(56, 460);
+            this.button6.Location = new System.Drawing.Point(56, 462);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
@@ -122,7 +122,7 @@ namespace NoteAppUI
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(105, 460);
+            this.button7.Location = new System.Drawing.Point(105, 462);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 50);
@@ -139,7 +139,7 @@ namespace NoteAppUI
             this.ContentTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ContentTextBox.Multiline = true;
             this.ContentTextBox.Name = "ContentTextBox";
-            this.ContentTextBox.Size = new System.Drawing.Size(681, 395);
+            this.ContentTextBox.Size = new System.Drawing.Size(681, 397);
             this.ContentTextBox.TabIndex = 17;
             // 
             // TimeModifiedPicker
@@ -191,7 +191,7 @@ namespace NoteAppUI
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 30);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 28);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -202,7 +202,7 @@ namespace NoteAppUI
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
-            this.splitContainer1.Size = new System.Drawing.Size(1067, 524);
+            this.splitContainer1.Size = new System.Drawing.Size(1067, 526);
             this.splitContainer1.SplitterDistance = 360;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 22;
@@ -221,7 +221,7 @@ namespace NoteAppUI
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 515);
+            this.panel1.Size = new System.Drawing.Size(361, 517);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -238,7 +238,7 @@ namespace NoteAppUI
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(702, 524);
+            this.panel2.Size = new System.Drawing.Size(702, 526);
             this.panel2.TabIndex = 0;
             // 
             // LableCategory
@@ -280,7 +280,7 @@ namespace NoteAppUI
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -289,7 +289,7 @@ namespace NoteAppUI
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
@@ -307,7 +307,7 @@ namespace NoteAppUI
             this.editNoteToolStripMenuItem,
             this.removeNoteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // addNoteToolStripMenuItem
@@ -337,7 +337,7 @@ namespace NoteAppUI
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
             // helpToolStripMenuItem
@@ -360,7 +360,7 @@ namespace NoteAppUI
             this.NotesListBox.ItemHeight = 16;
             this.NotesListBox.Location = new System.Drawing.Point(7, 31);
             this.NotesListBox.Name = "NotesListBox";
-            this.NotesListBox.Size = new System.Drawing.Size(349, 422);
+            this.NotesListBox.Size = new System.Drawing.Size(349, 424);
             this.NotesListBox.TabIndex = 14;
             this.NotesListBox.SelectedIndexChanged += new System.EventHandler(this.NotesListBox_SelectedIndexChanged);
             // 
