@@ -255,7 +255,7 @@ namespace NoteAppUI
             }
             var selectedNote = _visibleNotes[selectedIndex];
             var realIndex = _project.Notes.IndexOf(selectedNote);
-            //ДУБЛИРОВАНИЕ
+            
             LableName.Text = selectedNote.Name;
             LableCategory.Text = selectedNote.Category.ToString();
             ContentTextBox.Text = selectedNote.Text;
@@ -297,7 +297,11 @@ namespace NoteAppUI
             About frm = new About();
             frm.ShowDialog();
         }
-        //ДУБЛИРОВАНИЕ
+
+        /// <summary>
+        /// Фильтрация списка заметок
+        /// при изменении выбранной категории
+        /// </summary>
         private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CategoryComboBox.SelectedItem != null && CategoryComboBox.SelectedItem != "All")
@@ -322,6 +326,9 @@ namespace NoteAppUI
             ProjectManager.SaveToFile(_project, ProjectManager.DefaultPath);
         }
 
+        /// <summary>
+        /// Обработка события выбора содержимого StripMenu "Exit"
+        /// </summary>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProjectManager.SaveToFile(_project, ProjectManager.DefaultPath);
