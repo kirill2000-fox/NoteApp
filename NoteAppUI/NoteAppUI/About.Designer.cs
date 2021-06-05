@@ -54,7 +54,7 @@ namespace NoteAppUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 48);
+            this.label2.Location = new System.Drawing.Point(11, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 17);
             this.label2.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace NoteAppUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 103);
+            this.label3.Location = new System.Drawing.Point(12, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 17);
             this.label3.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace NoteAppUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 153);
+            this.label4.Location = new System.Drawing.Point(12, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 17);
             this.label4.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace NoteAppUI
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(147, 153);
+            this.linkLabel1.Location = new System.Drawing.Point(143, 144);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(148, 17);
             this.linkLabel1.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace NoteAppUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 185);
+            this.label5.Location = new System.Drawing.Point(12, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace NoteAppUI
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(68, 185);
+            this.linkLabel2.Location = new System.Drawing.Point(64, 170);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(262, 17);
             this.linkLabel2.TabIndex = 6;
