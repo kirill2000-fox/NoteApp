@@ -8,6 +8,7 @@ namespace NoteAppUI
 {
     public partial class NoteForm : Form
     {
+
         private Note _defaultData = new Note("Note name", NoteCategory.Job, "Note text");
         private bool _isCorrectData = true;
 

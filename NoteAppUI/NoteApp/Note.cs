@@ -2,7 +2,6 @@
 using System.Data;
 using Newtonsoft.Json;
 
-
 namespace NoteApp
 {
     /// <summary>

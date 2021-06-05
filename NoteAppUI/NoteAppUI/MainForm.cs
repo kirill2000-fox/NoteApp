@@ -6,16 +6,28 @@ using NoteApp;
 
 namespace NoteAppUI
 {
-
+    /// <summary>
+    /// Главная форма приложения
+    /// </summary>
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Создание переменной типа Project для работы с файлом
+        /// </summary>
         private Project _project;
+
+        /// <summary>
+        /// Переменная для всех заметок
+        /// </summary>
         private List<Note> _visibleNotes;
+
+        /// <summary>
+        /// Загрузка MainForm
+        /// </summary>
         public MainForm()
         {
-
             InitializeComponent();
-
+            //Загрузка заметок из файла
             _project = ProjectManager.LoadFromFile(ProjectManager.DefaultPath);
             _visibleNotes = _project.TimeModifiedSort();
             _project.Notes = _visibleNotes;
@@ -90,7 +102,7 @@ namespace NoteAppUI
         }
 
         /// <summary>
-        /// Очитстка полей
+        /// Очистка полей
         /// </summary>
         private void ClearAll()
         {

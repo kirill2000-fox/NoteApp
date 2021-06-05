@@ -1,8 +1,5 @@
-﻿
-
-using System;
+﻿using System;
 using System.IO;
-
 using Newtonsoft.Json;
 
 namespace NoteApp
@@ -14,6 +11,9 @@ namespace NoteApp
     {
         private const string FileName = "NoteApp.notes";
 
+        /// <summary>
+        /// Файл для сохранений и загрузки
+        /// </summary>
         public static string DefaultPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+"\\NoteApp\\"+FileName;
 
         /// <summary>
