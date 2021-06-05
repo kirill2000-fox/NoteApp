@@ -61,6 +61,22 @@ namespace NoteAppUI
         }
 
         /// <summary>
+        /// Выбор первой заметки из списка
+        /// </summary>
+        private void SelectFirstNote()
+        {
+            if (NotesListBox.Items.Count > 0)
+            {
+                NotesListBox.SelectedItem = NotesListBox.Items[0];
+            }
+            else
+            {
+                _project.SelectedNote = null;
+                ClearAll();
+            }
+        }
+
+        /// <summary>
         /// Обновление списка заметок после изменения списка.
         /// </summary>
         private void UpdateNotesListBoxAfterChange(Note note)
@@ -85,15 +101,7 @@ namespace NoteAppUI
                 }
                 else
                 {
-                    if (NotesListBox.Items.Count > 0)
-                    {
-                        NotesListBox.SelectedItem = NotesListBox.Items[0];
-                    }
-                    else
-                    {
-                        _project.SelectedNote = null;
-                        ClearAll();
-                    }
+                    SelectFirstNote();
                 }
             }
             else
@@ -193,10 +201,8 @@ namespace NoteAppUI
                 var selectedNote = _visibleNotes[selectedIndex];
                 var realIndex = _project.Notes.IndexOf(selectedNote);
 
-                var copyNote = (Note)selectedNote.Clone();
                 _project.Notes.RemoveAt(realIndex);
 
-                //ЗАЧЕМ ЗДЕСЬ  копирование???
                 if (CategoryComboBox.SelectedItem != null && CategoryComboBox.SelectedItem != "All")
                 {
                     _visibleNotes = _project.TimeModifiedSortWithCategory((NoteCategory)CategoryComboBox.SelectedItem);
@@ -207,16 +213,7 @@ namespace NoteAppUI
                 }
 
                 UpdateNotesListBox();
-                //УБРАТЬ ДУБЛИРОВАНИЕ
-                if (NotesListBox.Items.Count > 0)
-                {
-                    NotesListBox.SelectedItem = NotesListBox.Items[0];
-                }
-                else
-                {
-                    _project.SelectedNote = null;
-                    ClearAll();
-                }
+                SelectFirstNote();
             }
 
 
