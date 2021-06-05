@@ -50,6 +50,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>$(SolutionDir)packages\Tools.InnoSetup.6.0.5\tools\ISCC.exe $(SolutionDir)Installer\InstallScripts\NoteAppSetup.iss</PostBuildEvent>
+    <PostBuildEvent>$(SolutionDir)packages\Tools.InnoSetup.6.1.2\tools\ISCC.exe $(SolutionDir)Installer\InstallScripts\NoteAppSetup.iss</PostBuildEvent>
   </PropertyGroup>
 </Project>

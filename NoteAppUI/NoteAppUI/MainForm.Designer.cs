@@ -42,6 +42,7 @@ namespace NoteAppUI
             this.label2 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.NotesListBox = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LableCategory = new System.Windows.Forms.TextBox();
             this.LableName = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@ namespace NoteAppUI
             this.removeNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.NotesListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -224,6 +224,23 @@ namespace NoteAppUI
             this.panel1.Size = new System.Drawing.Size(361, 517);
             this.panel1.TabIndex = 0;
             // 
+            // NotesListBox
+            // 
+            this.NotesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NotesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NotesListBox.FormattingEnabled = true;
+            this.NotesListBox.HorizontalScrollbar = true;
+            this.NotesListBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.NotesListBox.IntegralHeight = false;
+            this.NotesListBox.ItemHeight = 18;
+            this.NotesListBox.Location = new System.Drawing.Point(7, 31);
+            this.NotesListBox.Name = "NotesListBox";
+            this.NotesListBox.Size = new System.Drawing.Size(349, 424);
+            this.NotesListBox.TabIndex = 14;
+            this.NotesListBox.SelectedIndexChanged += new System.EventHandler(this.NotesListBox_SelectedIndexChanged);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.LableCategory);
@@ -245,9 +262,10 @@ namespace NoteAppUI
             // 
             this.LableCategory.BackColor = System.Drawing.SystemColors.Menu;
             this.LableCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LableCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LableCategory.Location = new System.Drawing.Point(75, 70);
             this.LableCategory.Name = "LableCategory";
-            this.LableCategory.Size = new System.Drawing.Size(105, 15);
+            this.LableCategory.Size = new System.Drawing.Size(105, 17);
             this.LableCategory.TabIndex = 26;
             // 
             // LableName
@@ -347,22 +365,6 @@ namespace NoteAppUI
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.helpToolStripMenuItem.Text = "About";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
-            // NotesListBox
-            // 
-            this.NotesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NotesListBox.FormattingEnabled = true;
-            this.NotesListBox.HorizontalScrollbar = true;
-            this.NotesListBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.NotesListBox.IntegralHeight = false;
-            this.NotesListBox.ItemHeight = 16;
-            this.NotesListBox.Location = new System.Drawing.Point(7, 31);
-            this.NotesListBox.Name = "NotesListBox";
-            this.NotesListBox.Size = new System.Drawing.Size(349, 424);
-            this.NotesListBox.TabIndex = 14;
-            this.NotesListBox.SelectedIndexChanged += new System.EventHandler(this.NotesListBox_SelectedIndexChanged);
             // 
             // MainForm
             // 

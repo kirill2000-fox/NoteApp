@@ -10,9 +10,8 @@ namespace NoteAppUI
     public partial class MainForm : Form
     {
         private Project _project;
-        private Note _note = new Note("Имя заметки", NoteCategory.Job, "Текст заметки");
         private List<Note> _visibleNotes;
-        private NoteForm F1 = new NoteForm();
+        private NoteForm F1 = new NoteForm();//ЧТО ЗА а1
         public MainForm()
         {
 
@@ -183,6 +182,7 @@ namespace NoteAppUI
                 var copyNote = (Note)selectedNote.Clone();
                 _project.Notes.RemoveAt(realIndex);
 
+                //ЗАЧЕМ ЗДЕСЬ  копирование???
                 if ((NoteCategory)CategoryComboBox.SelectedItem != NoteCategory.All)
                 {
                     _visibleNotes = _project.TimeModifiedSortWithCategory((NoteCategory)CategoryComboBox.SelectedItem);
@@ -193,7 +193,7 @@ namespace NoteAppUI
                 }
 
                 UpdateNotesListBox();
-
+                //УБРАТЬ ДУБЛИРОВАНИЕ
                 if (NotesListBox.Items.Count > 0)
                 {
                     NotesListBox.SelectedItem = NotesListBox.Items[0];
@@ -244,7 +244,7 @@ namespace NoteAppUI
             }
             var selectedNote = _visibleNotes[selectedIndex];
             var realIndex = _project.Notes.IndexOf(selectedNote);
-
+            //ДУБЛИРОВАНИЕ
             LableName.Text = selectedNote.Name;
             LableCategory.Text = selectedNote.Category.ToString();
             ContentTextBox.Text = selectedNote.Text;
@@ -286,7 +286,7 @@ namespace NoteAppUI
             About frm = new About();
             frm.ShowDialog();
         }
-
+        //ДУБЛИРОВАНИЕ
         private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if ((NoteCategory)CategoryComboBox.SelectedItem != NoteCategory.All)

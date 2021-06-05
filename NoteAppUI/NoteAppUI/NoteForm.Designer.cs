@@ -54,6 +54,7 @@ namespace NoteAppUI
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(717, 412);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
@@ -65,6 +66,7 @@ namespace NoteAppUI
             // 
             // buttonOK
             // 
+            this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonOK.Location = new System.Drawing.Point(635, 412);
             this.buttonOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonOK.Name = "buttonOK";
@@ -103,7 +105,7 @@ namespace NoteAppUI
             this.TimeCreatedPicker.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.TimeCreatedPicker.Enabled = false;
             this.TimeCreatedPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimeCreatedPicker.Location = new System.Drawing.Point(81, 71);
+            this.TimeCreatedPicker.Location = new System.Drawing.Point(74, 71);
             this.TimeCreatedPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimeCreatedPicker.Name = "TimeCreatedPicker";
             this.TimeCreatedPicker.Size = new System.Drawing.Size(141, 22);
@@ -114,7 +116,7 @@ namespace NoteAppUI
             this.TimeModifiedPicker.CustomFormat = "dd.MM.yyyyy HH:mm";
             this.TimeModifiedPicker.Enabled = false;
             this.TimeModifiedPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimeModifiedPicker.Location = new System.Drawing.Point(299, 71);
+            this.TimeModifiedPicker.Location = new System.Drawing.Point(556, 76);
             this.TimeModifiedPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimeModifiedPicker.Name = "TimeModifiedPicker";
             this.TimeModifiedPicker.Size = new System.Drawing.Size(141, 22);
@@ -158,7 +160,7 @@ namespace NoteAppUI
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(228, 71);
+            this.label5.Location = new System.Drawing.Point(471, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 12;
