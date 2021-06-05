@@ -54,7 +54,7 @@ namespace NoteAppUI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(717, 422);
+            this.button1.Location = new System.Drawing.Point(717, 412);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 25);
@@ -65,7 +65,7 @@ namespace NoteAppUI
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(635, 422);
+            this.buttonOK.Location = new System.Drawing.Point(635, 412);
             this.buttonOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(76, 25);
@@ -83,7 +83,7 @@ namespace NoteAppUI
             this.TextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBox.Multiline = true;
             this.TextBox.Name = "TextBox";
-            this.TextBox.Size = new System.Drawing.Size(783, 313);
+            this.TextBox.Size = new System.Drawing.Size(783, 303);
             this.TextBox.TabIndex = 0;
             this.TextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
