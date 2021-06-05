@@ -11,7 +11,6 @@ namespace NoteAppUI
     {
         private Project _project;
         private List<Note> _visibleNotes;
-        private NoteForm F1 = new NoteForm();//ЧТО ЗА а1
         public MainForm()
         {
 
@@ -130,7 +129,7 @@ namespace NoteAppUI
             var selectedItem = _visibleNotes[selectedIndex];
             if (selectedItem == null)
             {
-                MessageBox.Show("Не выбрана запись для редактирования", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("No note selected for editing", "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return;
             }
@@ -157,7 +156,7 @@ namespace NoteAppUI
             }
             catch
             {
-                MessageBox.Show("Запись не найдена", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Note not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -170,11 +169,11 @@ namespace NoteAppUI
             var selectedIdex = NotesListBox.SelectedIndex;
             if (selectedIdex == -1)
             {
-                MessageBox.Show("Не выбрана запись для удаления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No note selected for deletion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var dialogResult = MessageBox.Show("Вы дейcтвительно хотите удалить запись?", "Удаление записи", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            var dialogResult = MessageBox.Show("Do you really want to delete an note?", "Delete note ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.OK)
             {
                 var selectedIndex = NotesListBox.SelectedIndex;
@@ -224,13 +223,13 @@ namespace NoteAppUI
         
         {
             ToolTip createTip = new ToolTip(); 
-            createTip.SetToolTip(button5, "Создать заметку");
+            createTip.SetToolTip(button5, "Add note");
 
             ToolTip changeTip = new ToolTip(); 
-            changeTip.SetToolTip(button6, "Изменить заметку");
+            changeTip.SetToolTip(button6, "Edit note");
 
             ToolTip deleteTip = new ToolTip();
-            deleteTip.SetToolTip(button7, "Удалить заметку");
+            deleteTip.SetToolTip(button7, "Delete note");
         }
 
         /// <summary>

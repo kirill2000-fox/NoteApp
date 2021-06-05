@@ -61,7 +61,7 @@ namespace NoteAppUI
         {
             if (!_isCorrectData)
             {
-                MessageBox.Show("Данные введены неверно", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Данные введены неверно", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
