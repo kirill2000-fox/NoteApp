@@ -124,10 +124,10 @@
     <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>rmdir /s /q $(SolutionDir)Installer\InstallScripts\Release
-md $(SolutionDir)Installer\InstallScripts\Release
-md $(SolutionDir)Installer\InstallScripts\Installers
-xcopy $(ProjectDir)$(OutDir)*.exe $(SolutionDir)Installer\InstallScripts\Release
-xcopy $(ProjectDir)$(OutDir)*.dll $(SolutionDir)Installer\InstallScripts\Release</PostBuildEvent>
+    <PostBuildEvent>rmdir /s /q "$(SolutionDir)Installer\InstallScripts\Release"
+md "$(SolutionDir)Installer\InstallScripts\Release"
+md "$(SolutionDir)Installer\InstallScripts\Installers"
+xcopy "$(ProjectDir)$(OutDir)*.exe" "$(SolutionDir)Installer\InstallScripts\Release"
+xcopy "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)Installer\InstallScripts\Release"</PostBuildEvent>
   </PropertyGroup>
 </Project>
