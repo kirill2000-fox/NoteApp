@@ -233,13 +233,13 @@ namespace NoteAppUI
         
         {
             ToolTip createTip = new ToolTip(); 
-            createTip.SetToolTip(button5, "Add note");
+            createTip.SetToolTip(AddNotebutton, "Add note");
 
             ToolTip changeTip = new ToolTip(); 
-            changeTip.SetToolTip(button6, "Edit note");
+            changeTip.SetToolTip(EditNotebutton, "Edit note");
 
             ToolTip deleteTip = new ToolTip();
-            deleteTip.SetToolTip(button7, "Delete note");
+            deleteTip.SetToolTip(DeleteNotebutton, "Delete note");
         }
 
         /// <summary>
