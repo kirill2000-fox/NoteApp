@@ -46,11 +46,12 @@ namespace NoteAppUI
             // 
             this.NameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.NameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameBox.Location = new System.Drawing.Point(81, 6);
             this.NameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NameBox.Multiline = true;
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(712, 24);
+            this.NameBox.Size = new System.Drawing.Size(712, 26);
             this.NameBox.TabIndex = 0;
             this.NameBox.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
             // 
@@ -128,11 +129,12 @@ namespace NoteAppUI
             // 
             this.CategoryBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CategoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CategoryBox.FormattingEnabled = true;
             this.CategoryBox.Location = new System.Drawing.Point(81, 38);
             this.CategoryBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CategoryBox.Name = "CategoryBox";
-            this.CategoryBox.Size = new System.Drawing.Size(169, 24);
+            this.CategoryBox.Size = new System.Drawing.Size(169, 26);
             this.CategoryBox.TabIndex = 9;
             this.CategoryBox.SelectedIndexChanged += new System.EventHandler(this.CategoryBox_SelectedIndexChanged);
             // 
