@@ -56,11 +56,13 @@ namespace NoteApp
                         }
                     }
                 }
+
                 catch (JsonReaderException)
                 {
                     return new Project();
                 }
             }
+
             else
             {
                 return new Project();

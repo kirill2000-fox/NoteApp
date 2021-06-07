@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using NoteApp;
 
-
 namespace NoteAppUI
 {
     public partial class NoteForm : Form
@@ -90,6 +89,7 @@ namespace NoteAppUI
                 _isCorrectData = true;
                 TimeModifiedPicker.Text = _defaultData.TimeModified.ToShortDateString();
             }
+
             catch (ArgumentException)
             {
                 NameBox.BackColor = Color.Red;

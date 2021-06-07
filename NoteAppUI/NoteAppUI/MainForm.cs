@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using NoteApp;
 
-
 namespace NoteAppUI
 {
     /// <summary>
@@ -299,8 +298,7 @@ namespace NoteAppUI
         }
 
         /// <summary>
-        /// Фильтрация списка заметок
-        /// при изменении выбранной категории
+        /// Фильтрация списка заметок при изменении выбранной категории
         /// </summary>
         private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
