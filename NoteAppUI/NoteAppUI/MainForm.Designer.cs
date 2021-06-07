@@ -29,6 +29,7 @@ namespace NoteAppUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.ShowCategory = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@ namespace NoteAppUI
             this.removeNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -423,6 +425,7 @@ namespace NoteAppUI
         private System.Windows.Forms.TextBox LableName;
         private System.Windows.Forms.TextBox LableCategory;
         private System.Windows.Forms.ListBox NotesListBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

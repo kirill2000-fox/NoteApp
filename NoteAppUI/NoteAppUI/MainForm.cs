@@ -131,7 +131,7 @@ namespace NoteAppUI
 
             if (addForm.DialogResult == DialogResult.OK)
             {
-                var addedNote = addForm.DefaultData;
+                var addedNote = addForm.Note;
                 _project.Notes.Add(addedNote);
                 UpdateNotesListBoxAfterChange(addedNote);
             }
@@ -149,7 +149,7 @@ namespace NoteAppUI
             var selectedItem = _visibleNotes[selectedIndex];
             if (selectedItem == null)
             {
-                MessageBox.Show("No note selected for editing", "Error", MessageBoxButtons.OK,
+                MessageBox.Show("No note selected for editing", "Warning", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
                 return;
             }
@@ -161,12 +161,12 @@ namespace NoteAppUI
                 var selectedNote = _project.Notes[realIndex];
 
                 var editForm = new NoteForm();
-                editForm.DefaultData = selectedNote.Clone() as Note;
+                editForm.Note = selectedNote.Clone() as Note;
                 editForm.ShowDialog();
 
                 if (editForm.DialogResult == DialogResult.OK)
                 {
-                    var editedNote = editForm.DefaultData;
+                    var editedNote = editForm.Note;
 
                     _project.Notes.RemoveAt(realIndex);
                     _project.Notes.Insert(realIndex, editedNote);
@@ -176,7 +176,7 @@ namespace NoteAppUI
             }
             catch
             {
-                MessageBox.Show("Note not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Note not found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -189,11 +189,11 @@ namespace NoteAppUI
             var selectedIdex = NotesListBox.SelectedIndex;
             if (selectedIdex == -1)
             {
-                MessageBox.Show("No note selected for deletion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Note not found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var dialogResult = MessageBox.Show("Do you really want to delete an note?", "Delete note ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            var dialogResult = MessageBox.Show("Do you really want to delete the note?", "Delete note", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.OK)
             {
                 var selectedIndex = NotesListBox.SelectedIndex;

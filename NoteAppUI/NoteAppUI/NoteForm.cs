@@ -9,12 +9,13 @@ namespace NoteAppUI
     {
 
         private Note _defaultData = new Note("Note name", NoteCategory.Job, "Note text");
+
         private bool _isCorrectData = true;
 
         /// <summary>
         /// Возвращает и задает данные формы
         /// </summary>
-        public Note DefaultData
+        public Note Note
         {
             get
             {
@@ -40,8 +41,8 @@ namespace NoteAppUI
             CategoryBox.SelectedItem = _defaultData.Category;
             NameBox.Text = _defaultData.Name;
             TextBox.Text = _defaultData.Text;
-            TimeCreatedPicker.Value = DefaultData.TimeCreated;
-            TimeModifiedPicker.Value = DefaultData.TimeModified;
+            TimeCreatedPicker.Value = Note.TimeCreated;
+            TimeModifiedPicker.Value = Note.TimeModified;
 
         }
 
