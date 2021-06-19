@@ -92,7 +92,6 @@ public class ProjectManagerTest
             "Метод SaveToFile сохраняет данные неверно");
     }
 
-    // TODO: Исправить тест
     [Test(Description = "Позитивный тест метода загрузки данных из файла")]
     public void TestLoadFromFile_CorrectValue()
     {
